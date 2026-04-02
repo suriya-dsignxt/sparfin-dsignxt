@@ -56,7 +56,7 @@ nav {
   backdrop-filter: blur(12px);
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
-.logo { display: inline-flex; align-items: center; width: fit-content; margin-left: 5px; }
+.logo { display: inline-flex; align-items: center; width: fit-content; margin-left: 20px;}
 .logo-badge {
   display: inline-flex; align-items: center; justify-content: center;
   width: 160px;
@@ -71,14 +71,13 @@ nav {
   object-fit: contain;
   object-position: center;
 }
-.footer-logo { margin-left: 5px; }
 .footer-logo .logo-badge {
-  width: 180px;
-  height: 60px;
+  width: 168px;
+  height: 46px;
   padding: 0;
 }
 .footer-logo .logo-img {
-  object-fit: contain;
+  transform: scale(1.58);
 }
 .nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a { color: var(--navy); font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
