@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARFIN Services – Trusted Loan Advisory Partner in Chennai</title>
+    <meta name="description" content="SPARFIN Services helps you compare and access Home Loans, Business Loans, Loan Against Property and more from leading banks and NBFCs in Chennai. Speak to our expert advisors today.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ═══ NAVIGATION ═══════════════════════════════════════ -->
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#hero" class="logo" aria-label="Sparfin home">
+                    <span class="logo-badge">
+                        <img src="images/logo.png" alt="Sparfin" class="logo-img">
+                    </span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why">Why Us</a></li>
+                    <li><a href="#calculator">EMI Calculator</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <span class="nav-phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 21.72 17l.2-.08z"/></svg>
+                        +91 93817 43934
+                    </span>
+                    <a href="javascript:void(0)" class="nav-btn" onclick="openModal()">Get Free Advice</a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services" onclick="toggleMenu()">Services</a>
+            <a href="#why" onclick="toggleMenu()">Why Us</a>
+            <a href="#calculator" onclick="toggleMenu()">EMI Calculator</a>
+            <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+            <a href="#faq" onclick="toggleMenu()">FAQ</a>
+            <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ══════════════════════════════════════════════ -->
+    <section id="hero">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <div class="hero-tag">🏆 Chennai's Trusted Loan Advisory Partner</div>
+                    <h1 class="hero-title">
+                        Your Loan.<br>
+                        Our <span>Expertise.</span><br>
+                        Best Rate. Guaranteed.
+                    </h1>
+                    <p class="hero-sub">
+                        We compare 25+ leading banks and NBFCs to find the right loan for your needs — with full transparency, expert guidance and zero hidden costs.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="javascript:void(0)" class="btn-primary" onclick="openModal()">
+                            Get Free Consultation
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#calculator" class="btn-outline btn-outline-light">Calculate EMI</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <svg class="trust-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            RBI Registered Bank Partners
+                        </div>
+                        <div class="trust-item">
+                            <svg class="trust-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            No Hidden Charges
+                        </div>
+                        <div class="trust-item">
+                            <svg class="trust-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Doorstep Service
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="hero-card">
+                        <div class="hero-card-title">What are you looking for?</div>
+                        <div class="loan-grid">
+                            <div class="loan-item"><div class="loan-icon">🏠</div><div class="loan-name">Home Loan</div><div class="loan-desc">From ₹10L – ₹10Cr+</div></div>
+                            <div class="loan-item"><div class="loan-icon">🏢</div><div class="loan-name">Loan Against Property</div><div class="loan-desc">Up to 70% of value</div></div>
+                            <div class="loan-item"><div class="loan-icon">🏗️</div><div class="loan-name">Commercial Loan</div><div class="loan-desc">Purchase &amp; construction</div></div>
+                            <div class="loan-item"><div class="loan-icon">💼</div><div class="loan-name">Business Loan</div><div class="loan-desc">Secured &amp; unsecured</div></div>
+                            <div class="loan-item" style="grid-column:1/-1;"><div class="loan-icon">🔑</div><div class="loan-name">Property Consultation</div><div class="loan-desc">Buy, sell &amp; investment advisory</div></div>
+                        </div>
+                        <div class="hero-cta-card">
+                            <span>Free advisory call — no obligation</span>
+                            <a href="javascript:void(0)" onclick="openModal()">Enquire Now →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ STATS BAR ═════════════════════════════════════════ -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-num"><span class="stat-accent">500+</span></div>
+                    <div class="stat-label">Loans Processed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span class="stat-accent">₹150Cr+</span></div>
+                    <div class="stat-label">Loan Amount Disbursed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span class="stat-accent">25+</span></div>
+                    <div class="stat-label">Bank &amp; NBFC Partners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span class="stat-accent">98%</span></div>
+                    <div class="stat-label">Client Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span class="stat-accent">7 Days</span></div>
+                    <div class="stat-label">Average Approval Time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ SERVICES ══════════════════════════════════════════ -->
+    <section id="services">
+        <div class="container">
+            <div class="services-header">
+                <div class="section-tag">Our Services</div>
+                <h2 class="section-title">Comprehensive Loan Solutions<br>Under One Roof</h2>
+                <p class="section-sub" style="margin:12px auto 0;">Whether you're buying your first home, expanding your business, or unlocking property value — we have the right solution for you.</p>
+            </div>
+            <div class="services-grid">
+
+                <!-- Home Loan -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">🏠</div>
+                    <h3>Home Loan</h3>
+                    <p>Make your dream home a reality. We help you compare interest rates, tenure options and processing fees across 20+ banks — so you get the best deal, not just any deal.</p>
+                    <ul>
+                        <li>Rates starting from 7.40% p.a.</li>
+                        <li>Loan tenure up to 30 years</li>
+                        <li>Minimum documentation support</li>
+                        <li>Available for ready, under-construction &amp; resale properties</li>
+                        <li>Balance transfer &amp; top-up assistance</li>
+                    </ul>
+                    <a class="service-link" href="#contact">Get home loan advice <span>→</span></a>
+                </div>
+
+                <!-- LAP -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">🏢</div>
+                    <h3>Loan Against Property</h3>
+                    <p>Unlock the equity in your existing residential or commercial property for business growth, education, medical emergencies or any personal need.</p>
+                    <ul>
+                        <li>Up to 70% of property market value</li>
+                        <li>Lowest interest rates vs personal loans</li>
+                        <li>Flexible repayment up to 20 years</li>
+                        <li>Both residential &amp; commercial properties eligible</li>
+                        <li>NRI property loan also facilitated</li>
+                    </ul>
+                    <a class="service-link" href="#contact">Unlock your property equity <span>→</span></a>
+                </div>
+
+                <!-- Commercial -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">🏗️</div>
+                    <h3>Commercial Property Loan</h3>
+                    <p>Fund the purchase, construction or renovation of commercial spaces — offices, shops, warehouses and mixed-use properties — with expert guidance on structuring.</p>
+                    <ul>
+                        <li>Purchase of shops, offices &amp; industrial units</li>
+                        <li>Construction &amp; renovation financing</li>
+                        <li>Lease rental discounting facility</li>
+                        <li>Suitable for self-employed and businesses</li>
+                        <li>Loan amount from ₹25L to ₹10Cr+</li>
+                    </ul>
+                    <a class="service-link" href="#contact">Explore commercial loans <span>→</span></a>
+                </div>
+
+                <!-- Business Loan -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">💼</div>
+                    <h3>Business Loan</h3>
+                    <p>Scale faster with the right credit. From working capital to equipment finance and MSME loans — we connect you with lenders who understand your business model.</p>
+                    <ul>
+                        <li>Secured &amp; unsecured options available</li>
+                        <li>MSME, startup and established business loans</li>
+                        <li>Overdraft and term loan structures</li>
+                        <li>Minimal collateral options available</li>
+                        <li>Turnaround within 7–10 working days</li>
+                    </ul>
+                    <a class="service-link" href="#contact">Grow your business <span>→</span></a>
+                </div>
+
+                <!-- Property Consultation -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">🔑</div>
+                    <h3>Property Consultation</h3>
+                    <p>End-to-end guidance for buying, selling or investing in property. Our advisors combine financial acumen with real estate market insights specific to Chennai.</p>
+                    <ul>
+                        <li>Property search &amp; shortlisting</li>
+                        <li>Legal verification &amp; due diligence</li>
+                        <li>Valuation &amp; market analysis</li>
+                        <li>Negotiation &amp; agreement support</li>
+                        <li>Registration &amp; documentation guidance</li>
+                    </ul>
+                    <a class="service-link" href="#contact">Talk to an advisor <span>→</span></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ WHY SPARFIN ═══════════════════════════════════════ -->
+    <section id="why">
+        <div class="container">
+                <div style="max-width:560px;">
+                <div class="section-tag">Why Choose Us</div>
+                <h2 class="section-title">We Work For You,<br>Not For the Bank</h2>
+                <p class="section-sub">Unlike banks that push their own products, SPARFIN is your independent advisor — comparing options from 25+ lenders to find what's genuinely best for you.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-num">01</div>
+                    <h3>Multi-Bank Comparison</h3>
+                    <p>We compare interest rates, processing fees, tenure and eligibility across 25+ banks and NBFCs — so you always get the most competitive offer available.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">02</div>
+                    <h3>100% Transparent Process</h3>
+                    <p>No hidden charges, no surprise fees. We walk you through every cost and clause in plain language, so you make decisions with complete confidence.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">03</div>
+                    <h3>Expert Documentation Support</h3>
+                    <p>Our team handles the paperwork — from property valuation to income verification — reducing errors and ensuring faster approval timelines.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">04</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>With our lender relationships and pre-verified workflows, approvals typically happen in 7–10 working days — significantly faster than direct bank applications.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">05</div>
+                    <h3>Personalised Eligibility Planning</h3>
+                    <p>We analyse your income, property, credit profile and loan requirements to design a plan that maximises your eligible loan amount at the best possible rate.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">06</div>
+                    <h3>Post-Disbursement Support</h3>
+                    <p>Our relationship doesn't end at disbursement. We assist with balance transfers, EMI issues, top-up loans and property-related queries even after your loan is active.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS ══════════════════════════════════════ -->
+    <section id="process">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:16px;">
+                <div class="section-tag">The Process</div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-sub" style="margin:12px auto 0;">From your first call to loan disbursement — a clear, guided journey with zero guesswork.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-circle">💬<div class="step-num">1</div></div>
+                    <h3>Free Consultation</h3>
+                    <p>Share your requirement — loan type, amount, property details. Our advisor understands your needs with zero obligation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle">🔍<div class="step-num">2</div></div>
+                    <h3>Eligibility &amp; Comparison</h3>
+                    <p>We assess your eligibility and compare offers across banks to shortlist the best 2–3 options for your profile.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle">📄<div class="step-num">3</div></div>
+                    <h3>Documentation &amp; Filing</h3>
+                    <p>We collect documents, prepare the file and submit to the chosen bank — handling follow-ups on your behalf.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle">🎉<div class="step-num">4</div></div>
+                    <h3>Approval &amp; Disbursal</h3>
+                    <p>Loan sanctioned and disbursed. We stay with you through signing and ensure smooth handover of funds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ EMI CALCULATOR ════════════════════════════════════ -->
+    <section id="calculator">
+        <div class="container">
+            <div class="calc-wrapper">
+                <div class="calc-header">
+                    <div class="section-tag">Planning Tool</div>
+                    <h2 class="section-title" style="color:#fff;">EMI Calculator</h2>
+                    <p class="section-sub">Estimate your monthly instalment in seconds. For a personalised rate, speak to our advisor.</p>
+                </div>
+                <div class="calc-body">
+                    <div class="calc-inputs">
+                        <div class="input-group">
+                            <label>Loan Amount</label>
+                            <div class="input-row">
+                                <input type="range" id="loanAmt" min="500000" max="20000000" step="100000" value="5000000">
+                                <input type="text" class="input-val" id="loanAmtVal" value="₹50L">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Interest Rate (p.a.)</label>
+                            <div class="input-row">
+                                <input type="range" id="intRate" min="7" max="18" step="0.1" value="8.5">
+                                <input type="text" class="input-val" id="intRateVal" value="8.5%">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Loan Tenure</label>
+                            <div class="input-row">
+                                <input type="range" id="tenure" min="1" max="30" step="1" value="20">
+                                <input type="text" class="input-val" id="tenureVal" value="20 Yrs">
+                            </div>
+                        </div>
+                        <div style="margin-top:28px;">
+                            <p style="color:rgba(255,255,255,0.45);font-size:0.8rem;line-height:1.6;">💡 <strong style="color:rgba(255,255,255,0.7);">Pro Tip:</strong> Even a 0.5% rate reduction on a ₹50L loan over 20 years can save you ₹3–4 lakhs. Our advisors negotiate on your behalf.</p>
+                        </div>
+                    </div>
+                    <div class="calc-result">
+                        <div class="emi-display">
+                            <div class="emi-label">Your Monthly EMI</div>
+                            <div class="emi-amount" id="emiResult">₹43,391</div>
+                            <div class="emi-unit">per month</div>
+                        </div>
+                        <div class="emi-breakdown">
+                            <div class="breakdown-row"><span>Principal Amount</span><span id="breakPrincipal">₹50,00,000</span></div>
+                            <div class="breakdown-row"><span>Total Interest Payable</span><span id="breakInterest">₹54,13,840</span></div>
+                            <div class="breakdown-row"><span>Total Amount Payable</span><span id="breakTotal">₹1,04,13,840</span></div>
+                            <div class="breakdown-row"><span>Loan Period</span><span id="breakTenure">20 Years</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-cta-row">
+                    <p class="calc-disclaimer">*This is an indicative calculation. Actual EMI depends on your loan type, bank policies and eligibility. Consult our advisors for an accurate quote.</p>
+                    <a href="javascript:void(0)" class="btn-primary" onclick="updateLeadFormAndOpenModal()">Get Exact Rate Quote →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="testi-header">
+                <div class="section-tag">Client Stories</div>
+                <h2 class="section-title">Trusted by Families &amp; Businesses<br>Across Chennai</h2>
+            </div>
+            <div class="grid-3">
+
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"SPARFIN made the entire home loan process stress-free. They compared 6 banks for us and got us a rate 0.3% lower than what our own bank had offered. The team was available at every step — from documentation to disbursement."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar">RK</div>
+                        <div>
+                            <div class="author-name">Rajesh Kumar</div>
+                            <div class="author-detail">Software Engineer, Anna Nagar</div>
+                            <div class="loan-badge">Home Loan – ₹65 Lakhs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"I needed urgent funds to expand my textile showroom and had already been rejected by two banks. SPARFIN assessed my eligibility honestly, guided me to the right lender and I had my LAP approved within 12 days. Exceptional service."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar">MP</div>
+                        <div>
+                            <div class="author-name">Meena Prakash</div>
+                            <div class="author-detail">Business Owner, T. Nagar</div>
+                            <div class="loan-badge">Loan Against Property – ₹40 Lakhs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"As a first-time buyer, I was completely lost. SPARFIN's advisor patiently explained every option, helped me understand the total cost of each offer and even advised on the best property to buy for future appreciation. Beyond just loans."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar">AS</div>
+                        <div>
+                            <div class="author-name">Arun Selvaraj</div>
+                            <div class="author-detail">Doctor, Adyar</div>
+                            <div class="loan-badge">Home Loan + Property Consultation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Our company needed a commercial property loan to purchase a new office space. SPARFIN structured the deal beautifully, got us a lease rental discounting arrangement we didn't even know existed. Saved us significant interest outflow."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar">VN</div>
+                        <div>
+                            <div class="author-name">Vijay Narayanan</div>
+                            <div class="author-detail">Director, Velachery</div>
+                            <div class="loan-badge">Commercial Property Loan – ₹1.2 Cr</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"What I appreciated most was the transparency. SPARFIN showed me a comparison sheet with actual numbers — no sales pressure, just facts. I made my decision confidently. Disbursement happened in 9 days. Highly recommend."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar">PL</div>
+                        <div>
+                            <div class="author-name">Priya Lakshmanan</div>
+                            <div class="author-detail">HR Manager, Porur</div>
+                            <div class="loan-badge">Home Loan – ₹45 Lakhs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"I had a complex file — self-employed with ITR variations. Most banks rejected or offered me high rates. SPARFIN knew exactly which lenders would accept my profile and got me sanctioned at a competitive rate. They really know the market."</p>
+                    <div class="testi-author">
+                        <div class="author-avatar">SK</div>
+                        <div>
+                            <div class="author-name">Suresh Krishnamurthy</div>
+                            <div class="author-detail">Chartered Accountant, Nungambakkam</div>
+                            <div class="loan-badge">Business Loan – ₹25 Lakhs</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FAQ ═══════════════════════════════════════════════ -->
+    <section id="faq">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:48px;">
+                <div class="section-tag">FAQs</div>
+                <h2 class="section-title">Common Questions</h2>
+            </div>
+            <div class="faq-grid" id="faqGrid">
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        Is SPARFIN a bank or lender?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">No. SPARFIN is an independent loan advisory firm. We do not lend money ourselves. We help you compare and access loans from leading banks and NBFCs — acting entirely in your interest, not the lender's.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        What is the eligibility for a home loan?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">Eligibility depends on your income, employment type (salaried or self-employed), credit history, age, property value and existing loan obligations. Speak to our advisor for a personalised eligibility assessment — it's free and takes under 15 minutes.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        How much does SPARFIN charge for advisory services?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">Initial consultation is completely free. Our advisory fees, if applicable, are clearly disclosed upfront before any service begins. There are no hidden charges — transparency is a core commitment we make to every client.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        How long does loan approval take?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">With complete documentation, most loans are approved within 7–10 working days through our process. Some lenders can provide in-principle sanction within 48 hours. The timeline depends on the loan type, amount and the lender's internal process.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        Can I transfer my existing home loan through SPARFIN?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">Absolutely. Balance transfers (BT) are one of the most valuable services we offer. If your current loan rate is higher than market rates, we can help you switch lenders and potentially save lakhs over the loan tenure. We'll also assess if a top-up loan makes sense alongside the transfer.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        What documents are typically needed?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">Standard documents include identity proof (Aadhaar/PAN), address proof, income documents (salary slips or ITR), bank statements (6 months) and property documents. The exact list varies by loan type and lender — our team will provide a personalised checklist.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        Do you serve NRI customers?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">Yes. We facilitate home loans and LAP for NRIs looking to buy or invest in property in Chennai. We handle the documentation and bank coordination on your behalf, and can coordinate through video calls and digital document submission.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        What is a Loan Against Property (LAP)?
+                        <div class="icon">+</div>
+                    </button>
+                    <div class="faq-a">LAP is a secured loan where you pledge your existing residential or commercial property as collateral to borrow funds. You can use the amount for any purpose — business expansion, education, medical expenses, debt consolidation etc. Interest rates are typically much lower than personal loans.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT / LEAD FORM ══════════════════════════════ -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <div class="section-tag">Get In Touch</div>
+                    <h2 class="section-title">Talk to Our<br>Loan Advisors Today</h2>
+                    <p class="section-sub">Free, no-obligation consultation. We'll assess your eligibility, compare options and guide you to the best loan — all within 24 hours.</p>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <div class="c-icon">📍</div>
+                            <div>
+                                <div class="c-label">Office Address</div>
+                                <div class="c-value">No. 42, 2nd Floor, Anna Nagar East,<br>Chennai – 600 102, Tamil Nadu</div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="c-icon">📞</div>
+                            <div>
+                                <div class="c-label">Call / WhatsApp</div>
+                                <div class="c-value">+91 93817 43934</div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="c-icon">📧</div>
+                            <div>
+                                <div class="c-label">Email</div>
+                                <div class="c-value">info@sparfinservices.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="c-icon">🕐</div>
+                            <div>
+                                <div class="c-label">Working Hours</div>
+                                <div class="c-value">Mon – Sat: 9:00 AM – 7:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <div>
+                            <strong>WhatsApp Consultation</strong>
+                            <p>Chat with an advisor instantly on WhatsApp — share documents, get updates.</p>
+                        </div>
+                        <a href="https://wa.me/919381743934?text=Hi SPARFIN, I would like to discuss my loan requirement." class="btn-whatsapp" style="white-space:nowrap;flex-shrink:0;">Chat Now</a>
+                    </div>
+                </div>
+
+                <!-- Quick Enquiry Trigger in Contact Section -->
+                <div class="quick-enquiry-card">
+                    <div class="q-icon">📝</div>
+                    <h3>Ready to take the first step?</h3>
+                    <p>Our advisors are ready to help you find the best loan. Fill our quick enquiry form to get started.</p>
+                    <button class="btn-primary" onclick="openModal()" style="width:100%; justify-content:center;">Open Enquiry Form →</button>
+                    <p style="font-size:0.75rem; color:rgba(255,255,255,0.72); text-align:center; margin-top:16px;">Takes less than 2 minutes</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ════════════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="logo footer-logo" aria-label="Sparfin home">
+                        <span class="logo-badge">
+                            <img src="images/logo.png" alt="Sparfin" class="logo-img">
+                        </span>
+                    </a>
+                    <p class="footer-desc">Your trusted loan advisory partner in Chennai. We help individuals and businesses compare and access the best financial solutions from 25+ leading banks and NBFCs.</p>
+                    <div class="footer-social">
+                        <a class="social-btn" href="#" title="Facebook">f</a>
+                        <a class="social-btn" href="#" title="Instagram">in</a>
+                        <a class="social-btn" href="#" title="LinkedIn">li</a>
+                        <a class="social-btn" href="#" title="YouTube">yt</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Home Loan</a></li>
+                        <li><a href="#services">Loan Against Property</a></li>
+                        <li><a href="#services">Commercial Property Loan</a></li>
+                        <li><a href="#services">Business Loan</a></li>
+                        <li><a href="#services">Property Consultation</a></li>
+                        <li><a href="#services">Balance Transfer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#why">About SPARFIN</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#banks">Our Partners</a></li>
+                        <li><a href="#testimonials">Client Reviews</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#contact">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+919381743934">+91 93817 43934</a></li>
+                        <li><a href="mailto:info@sparfinservices.com">info@sparfinservices.com</a></li>
+                        <li><a href="#">Anna Nagar East, Chennai</a></li>
+                        <li><a href="#">Mon–Sat, 9am–7pm</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.06);padding:20px 12px;max-width:1480px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <p>© 2025 SPARFIN Services LLP. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <div class="container">
+                <p>SPARFIN Services LLP is a loan advisory firm and does not directly lend money or guarantee loan approvals. All loan products, interest rates and terms are subject to individual lender policies, eligibility criteria and credit assessment. Interest rates mentioned are indicative and may vary. SPARFIN does not collect any advance fees. Loan approval is at the sole discretion of the respective bank or NBFC. Please read all terms and conditions carefully before applying.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a class="wa-float" href="https://wa.me/919381743934?text=Hi SPARFIN, I'd like to discuss my loan requirement." target="_blank">
+        <span class="wa-tooltip">Chat with us</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <!-- ═══ MODAL OVERLAY ══════════════════════════════════ -->
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="lead-form-card" id="leadForm" style="margin:0; box-shadow:none;">
+                <div id="formMain">
+                    <div class="form-title">Get Free Loan Advice</div>
+                    <div class="form-sub">Takes 2 minutes · No obligation · 100% confidential</div>
+                    <div class="form-progress">
+                        <div class="prog-step active" id="prog1"></div>
+                        <div class="prog-step" id="prog2"></div>
+                        <div class="prog-step" id="prog3"></div>
+                    </div>
+
+                    <!-- Step 1: Basic Info -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-step-title">Step 1 of 3 — Personal Details</div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label>Full Name *</label>
+                                <input type="text" id="fname" placeholder="Your full name">
+                            </div>
+                            <div class="form-field">
+                                <label>Phone Number *</label>
+                                <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>City / Locality</label>
+                                <input type="text" id="city" placeholder="e.g. Anna Nagar, Chennai">
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>Employment Type *</label>
+                                <select id="employment">
+                                    <option value="">Select employment type</option>
+                                    <option>Salaried – Private Sector</option>
+                                    <option>Salaried – Government / PSU</option>
+                                    <option>Self-Employed / Business Owner</option>
+                                    <option>Professional (Doctor / CA / Lawyer)</option>
+                                    <option>NRI</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-nav">
+                            <span></span>
+                            <button class="form-next" onclick="nextStep(1)">Continue →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Loan Requirement -->
+                    <div class="form-step" id="step2">
+                        <div class="form-step-title">Step 2 of 3 — Loan Requirement</div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>Loan Type Required *</label>
+                                <select id="loanType">
+                                    <option value="">Select loan type</option>
+                                    <option>Home Loan – Purchase</option>
+                                    <option>Home Loan – Construction</option>
+                                    <option>Home Loan – Balance Transfer</option>
+                                    <option>Loan Against Property (LAP)</option>
+                                    <option>Commercial Property Loan</option>
+                                    <option>Business Loan</option>
+                                    <option>Property Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>Approximate Loan Amount</label>
+                                <select id="loanAmount">
+                                    <option value="">Select range</option>
+                                    <option>Below ₹20 Lakhs</option>
+                                    <option>₹20 Lakhs – ₹50 Lakhs</option>
+                                    <option>₹50 Lakhs – ₹1 Crore</option>
+                                    <option>Above ₹1 Crore</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>Property Type (if applicable)</label>
+                                <select id="propType">
+                                    <option value="">Select property type</option>
+                                    <option>Apartment / Flat</option>
+                                    <option>Independent House / Villa</option>
+                                    <option>Plot / Land</option>
+                                    <option>Commercial Property</option>
+                                    <option>Under Construction</option>
+                                    <option>Not decided yet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-nav">
+                            <button class="form-back" onclick="prevStep(2)">← Back</button>
+                            <button class="form-next" onclick="nextStep(2)">Continue →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Current Stage -->
+                    <div class="form-step" id="step3">
+                        <div class="form-step-title">Step 3 of 3 — Final Details</div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>Where are you in the process?</label>
+                                <select id="stage">
+                                    <option value="">Select stage</option>
+                                    <option>Just exploring options</option>
+                                    <option>Identified property / need loan</option>
+                                    <option>Ready to apply – need best rate</option>
+                                    <option>Existing loan – want better rate</option>
+                                    <option>Need urgent funds</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>How do you prefer to be contacted?</label>
+                                <select id="prefContact">
+                                    <option value="">Select preference</option>
+                                    <option>Phone Call</option>
+                                    <option>WhatsApp</option>
+                                    <option>Email</option>
+                                    <option>Any</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-field">
+                                <label>Any specific question or requirement? (Optional)</label>
+                                <textarea id="notes" rows="3" placeholder="Tell us more about your requirement..." style="resize:vertical;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-nav" style="display:block;">
+                            <button class="form-submit" onclick="submitForm()">
+                                🔒 Submit — Get Free Advice
+                            </button>
+                            <p class="form-privacy">By submitting, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>. Your data is secure and will never be sold.</p>
+                        </div>
+                        <div style="margin-top:8px;">
+                            <button class="form-back" onclick="prevStep(3)">← Back</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success State -->
+                <div class="success-state" id="successState">
+                    <div class="success-icon">✅</div>
+                    <h3>Thank You!</h3>
+                    <p>Your enquiry has been received. One of our loan advisors will contact you within <strong>2 business hours</strong>.<br><br>In the meantime, feel free to WhatsApp us for a faster response.</p>
+                    <br>
+                    <a href="https://wa.me/919381743934" class="btn-whatsapp" style="margin:0 auto;width:fit-content;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Continue on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
