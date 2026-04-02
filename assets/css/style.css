@@ -60,7 +60,7 @@ nav {
 .logo-badge {
   display: inline-flex; align-items: center; justify-content: center;
   width: 154px;
-  height: 40px;
+  height: 50px;
   overflow: hidden;
   padding: 0;
   background: transparent;
@@ -145,7 +145,7 @@ nav {
 .stats-inner { display: flex; justify-content: space-between; align-items: stretch; }
 .stat-item { flex: 1; padding: 24px 20px; text-align: center; border-right: 1px solid var(--gray2); }
 .stat-item:last-child { border-right: none; }
-.stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--navy); }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--navy); text-transform: uppercase; }
 .stat-label { font-size: 0.8rem; color: var(--text2); margin-top: 2px; }
 .stat-accent { color: var(--gold); }
 
