@@ -12,6 +12,13 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
+// ── Footer accordion
+function toggleFooter(header) {
+  if (window.innerWidth > 768) return;
+  const col = header.closest('.footer-col');
+  col.classList.toggle('open');
+}
+
 // ── Multi-step form
 let currentStep = 1;
 function nextStep(from) {
