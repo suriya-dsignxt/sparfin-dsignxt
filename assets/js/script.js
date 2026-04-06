@@ -1,7 +1,8 @@
-// ── Mobile menu
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
+  const h = document.querySelector('.hamburger');
   m.classList.toggle('open');
+  h.classList.toggle('active');
 }
 
 // ── FAQ accordion
