@@ -175,9 +175,17 @@ nav {
 .hero-cta-card a { color: var(--navy2); font-weight: 700; font-size: 0.82rem; text-decoration: underline; }
 
 /* ─── STATS BAR ─────────────────────────────────────────── */
-.stats-bar { background: linear-gradient(180deg, #f7fffb 0%, #eefaf4 100%); border-bottom: 1px solid var(--gray2); }
-.stats-inner { display: flex; justify-content: space-between; align-items: stretch; }
-.stat-item { flex: 1; padding: 24px 20px; text-align: center; border-right: 1px solid var(--gray2); }
+.stats-bar { background: linear-gradient(180deg, #f7fffb 0%, #eefaf4 100%); border-bottom: 1px solid var(--gray2); overflow: hidden; }
+.stats-marquee { width: 100%; overflow: hidden; padding: 24px 0; }
+.stats-inner { display: flex; flex-wrap: nowrap; width: max-content; animation: marqueeScroll 30s linear infinite; }
+.stat-item { flex: 0 0 auto; width: 250px; text-align: center; border-right: 1px solid var(--gray2); padding: 0 15px; }
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.stats-inner:hover { animation-play-state: paused; }
 .stat-item:last-child { border-right: none; }
 .stat-num { font-family: 'DM Sans', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: -0.02em; }
 .stat-label { font-size: 0.8rem; color: var(--text2); margin-top: 2px; }
