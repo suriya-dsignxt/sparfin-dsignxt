@@ -226,7 +226,6 @@ function openModal() {
     document.getElementById('prog1').classList.add('active');
     
     document.getElementById('formMain').style.display = 'block';
-    document.getElementById('successState').classList.remove('show');
     
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
