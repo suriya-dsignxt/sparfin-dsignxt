@@ -348,7 +348,7 @@ a.c-value:hover { color: var(--navy2); text-decoration: underline; }
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
 .why-card { 
   background: rgba(255,255,254,0.04); 
-  border: 1px solid rgba(255,255,255,0.12); 
+  border: 1.5px solid rgba(255,255,255,0.12); 
   border-radius: 24px; 
   padding: 40px; 
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); 
