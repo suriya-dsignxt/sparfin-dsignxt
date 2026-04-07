@@ -256,3 +256,34 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
         }
     });
 });
+
+// ── Reveal Animations & Header Effects
+document.addEventListener('DOMContentLoaded', () => {
+  // Intersection Observer for .reveal elements
+  const revealOptions = { 
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px' 
+  };
+  
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Stop observing once animated
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Navbar background change on scroll
+  const navbar = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+});
