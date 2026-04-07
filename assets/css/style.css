@@ -24,8 +24,8 @@
 
 /* ─── RESET & BASE ──────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; color: var(--text); background: linear-gradient(180deg, #ffffff 0%, #f8fffb 52%, #ffffff 100%); overflow-x: hidden; }
+html, body { overflow-x: hidden; width: 100%; -webkit-overflow-scrolling: touch; }
+body { font-family: 'DM Sans', sans-serif; color: var(--text); background: linear-gradient(180deg, #ffffff 0%, #f8fffb 52%, #ffffff 100%); position: relative; }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 button { font-family: inherit; cursor: pointer; border: none; outline: none; }
@@ -744,12 +744,14 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .footer-accordion.open .acc-icon { transform: rotate(45deg); }
   
   .contact-grid { gap: 40px; }
+  .hero-cta-bar { padding: 14px 16px; font-size: 0.82rem; white-space: nowrap; }
+  .cta-link { font-size: 0.95rem; text-decoration: underline; white-space: nowrap; }
   .quick-enquiry-card { padding: 32px 24px; }
   .quick-enquiry-card h3 { font-size: 1.5rem; }
   .hero-cta-card { flex-direction: column; gap: 12px; text-align: center; border-radius: 12px; padding: 22px 16px; margin-top: 10px; }
-  .cta-link { font-size: 1.1rem; text-decoration: underline; }
   .whatsapp-box { flex-direction: column; text-align: center; gap: 12px; }
   .whatsapp-box a { width: 100%; justify-content: center; }
+  .footer-logo { left: 0; top: 0; margin-bottom: 24px; }
 }
 
 @media (max-width: 480px) {
@@ -759,7 +761,9 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; justify-content: center; }
   .section-title { font-size: 1.8rem; }
   .calc-inputs, .calc-result, .calc-header { padding: 20px 16px; }
-  .emi-amount { font-size: 2.1rem; }
+  .emi-amount { font-size: 1.95rem; }
+  .hero-cta-bar { padding: 12px 14px; font-size: 0.78rem; border-radius: 10px; }
+  .cta-link { font-size: 0.88rem; gap: 4px; }
   .modal-overlay { padding: 10px; }
   .modal-content { border-radius: 12px; }
 }
