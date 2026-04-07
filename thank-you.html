@@ -47,7 +47,7 @@
             max-width: 640px;
             width: 100%;
             background: rgba(255, 255, 255, 0.9);
-            padding: 70px 50px;
+            padding: 60px 40px;
             border-radius: 40px;
             box-shadow: 
                 0 40px 100px rgba(35, 17, 145, 0.08),
@@ -67,7 +67,7 @@
         .lottie-container {
             width: 140px;
             height: 140px;
-            margin: -20px auto 30px;
+            margin: 0 auto 30px;
             pointer-events: none;
             display: flex;
             align-items: center;
@@ -93,6 +93,15 @@
             animation: fadeIn 0.8s ease-out 0.6s forwards;
         }
 
+        .redirect-notice {
+            font-size: 0.9rem;
+            color: var(--text2);
+            opacity: 0.7;
+            margin-top: 30px;
+            animation: fadeIn 0.8s ease-out 1s forwards;
+            opacity: 0;
+        }
+
         @keyframes fadeIn {
             to { opacity: 1; }
         }
@@ -100,7 +109,7 @@
         .cta-group {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 16px;
             opacity: 0;
             animation: fadeIn 0.8s ease-out 0.8s forwards;
         }
@@ -110,52 +119,42 @@
             align-items: center;
             justify-content: center;
             gap: 14px;
-            padding: 18px 36px;
+            padding: 16px 32px;
             border-radius: 99px;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         .btn-primary {
             background: var(--navy);
             color: #fff;
-            box-shadow: 0 15px 35px rgba(35, 17, 145, 0.2);
+            box-shadow: 0 10px 30px rgba(35, 17, 145, 0.15);
         }
 
         .btn-primary:hover {
             background: var(--navy2);
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 20px 45px rgba(35, 17, 145, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(35, 17, 145, 0.2);
         }
 
         .btn-whatsapp {
             background: #25D366;
             color: #fff;
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.2);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.15);
         }
 
         .btn-whatsapp:hover {
             background: #1ead52;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.25);
-        }
-
-        .brand-logo {
-            font-weight: 800;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--gold);
-            margin-bottom: 20px;
-            display: block;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.2);
         }
 
         @media (max-width: 576px) {
-            .thank-you-card { padding: 50px 24px; border-radius: 32px; }
+            .thank-you-card { padding: 40px 24px; border-radius: 32px; }
             h1 { font-size: 2.1rem; }
-            p { font-size: 1.05rem; }
+            p { font-size: 1rem; }
             .lottie-container { width: 120px; height: 120px; }
         }
     </style>
@@ -163,10 +162,7 @@
 <body>
 
     <div class="thank-you-card">
-        <span class="brand-logo">SPARFIN Services</span>
-        
         <div class="lottie-container">
-            <!-- Using a stable public JSON checkmark animation -->
             <dotlottie-player 
                 src="https://lottie.host/9b85edc4-42f4-406e-826a-93e116bc37e8/2A48K34qZ6.json" 
                 background="transparent" 
@@ -177,18 +173,34 @@
         </div>
 
         <h1>Success!</h1>
-        <p>Thank you for reaching out to <strong>SPARFIN Services</strong>. Your enquiry has been routed to our senior advisor team. We'll be in touch within the next 24 hours.</p>
+        <p>Thank you for reaching out to <strong>SPARFIN Services</strong>. Your enquiry has been received. Our senior advisor team will reach out within the next 24 hours.</p>
         
         <div class="cta-group">
-            <a href="https://wa.me/919381743934?text=Hi%20SPARFIN,%20I%20just%20submitted%20my%20loan%20enquiry%20via%20the%20website.%20I'd%20like%20to%20discuss%20my%20requirement." class="btn btn-whatsapp">
+            <a href="https://wa.me/919381743934?text=Hi%20SPARFIN,%20I%20just%20submitted%20my%20loan%20enquiry%20via%20the%20website.%20" class="btn btn-whatsapp">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Chat on WhatsApp now →
+                Chat on WhatsApp now
             </a>
             <a href="index.html" class="btn btn-primary">
                 Return to Home
             </a>
         </div>
+
+        <p class="redirect-notice">Returning to home page in <span id="countdown">15</span>s...</p>
     </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownEl = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
