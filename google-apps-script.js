@@ -2,39 +2,71 @@
 // 1. In your Google Sheet (sparfin_forms_sheet), go to "Extensions" > "Apps Script".
 // 2. Delete any existing code in the editor and PASTE THIS ENTIRE FILE.
 // 3. Click "Save" (disk icon).
-// 4. Click the "Deploy" button (top right) > "New deployment".
-// 5. Select Type: "Web App".
-// 6. Description: "Sparfin Lead Form Handler v2".
-// 7. Execute as: "Me" (your email).
-// 8. Who has access: "Anyone" (CRITICAL: Required for the website to send data).
-// 9. Click "Deploy". You'll get a "Web App URL" (ends in /exec).
-// 10. COPY that URL and paste it into assets/js/script.js.
+// 4. CRITICAL: Select 'manualTest' from the function dropdown at the top 
+//    and click "Run". This will trigger the "Review Permissions" popup. 
+//    Follow the prompts to ALLOW access to your Sheet and Gmail.
+// 5. Click the "Deploy" button (top right) > "New deployment".
+// 6. Select Type: "Web App". Description: "Sparfin Lead v3". 
+//    Execute as: "Me". Who has access: "Anyone".
+// 7. Click "Deploy". COPY the new Web App URL to assets/js/script.js.
 
 // ── Configuration ──────────────────────────────────────────────────────
 var NOTIFICATION_EMAIL = 'ceo@fenzo.co, suriya@dsignxt.com';
 var SHEET_NAME_LEADS = 'Website Leads';
 
 /**
- * GET Request Handler (for testing)
- * Visit the Web App URL in your browser to see if the script is alive.
+ * MANUAL TEST FUNCTION (Run this once manually in the editor)
+ * Use this to authorize the script and verify everything works!
  */
+function manualTest() {
+  var testData = {
+    fname: "Test User",
+    phone: "9999999999",
+    city: "Chennai (Test)",
+    employment: "Salaried",
+    loanType: "Home Loan",
+    loanAmount: "50 Lakhs",
+    propType: "Flat",
+    stage: "Exploring",
+    prefContact: "WhatsApp",
+    notes: "Testing the script v3",
+    source: "Manual Test"
+  };
+  
+  Logger.log("Starting manual test...");
+  var result = processLead(testData);
+  Logger.log("Result: " + result);
+  
+  if (result === "Success") {
+    Logger.log("Check your Google Sheet and your Email inbox now!");
+  } else {
+    Logger.log("Error occurred: " + result);
+  }
+}
+
 function doGet() {
-  return ContentService.createTextOutput("SPARFIN Script is ACTIVE! (v2.0)").setMimeType(ContentService.MimeType.TEXT);
+  return ContentService.createTextOutput("SPARFIN Script is ACTIVE! (v3.0)").setMimeType(ContentService.MimeType.TEXT);
+}
+
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var result = processLead(data);
+    return ContentService.createTextOutput(result).setMimeType(ContentService.MimeType.TEXT);
+  } catch (error) {
+    return ContentService.createTextOutput("Error: " + error.toString()).setMimeType(ContentService.MimeType.TEXT);
+  }
 }
 
 /**
- * POST Request Handler (main entry point)
+ * Shared Core Logic for Leading Processing
  */
-function doPost(e) {
+function processLead(data) {
   try {
-    // 1. Parse JSON data from the request
-    var data = JSON.parse(e.postData.contents);
-    
-    // 2. Open the active spreadsheet
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = ss.getSheetByName(SHEET_NAME_LEADS);
     
-    // 3. If the "Website Leads" sheet doesn't exist, create it with headers
+    // Auto-create sheet if it doesn't exist
     if (!sheet) {
       sheet = ss.insertSheet(SHEET_NAME_LEADS);
       sheet.appendRow([
@@ -42,10 +74,10 @@ function doPost(e) {
         'Loan Type', 'Loan Amount', 'Property Type', 'Stage', 
         'Preference', 'Notes', 'Source'
       ]);
-      sheet.getRange(1, 1, 1, 12).setFontWeight('bold').setBackground('#f3f3f3');
+      sheet.getRange(1, 1, 1, 12).setFontWeight('bold').setBackground('#EBF5FB');
+      sheet.setFrozenRows(1);
     }
     
-    // 4. Prepare row data
     var row = [
       new Date(),
       data.fname || 'N/A',
@@ -61,52 +93,40 @@ function doPost(e) {
       data.source || 'Website'
     ];
     
-    // 5. Append to sheet
     sheet.appendRow(row);
     
-    // 6. Send Email Notification
+    // Send Email via GmailApp (more robust than MailApp)
     sendLeadEmail(data);
     
-    // 7. Return success response
-    return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
-    
-  } catch (error) {
-    // Log error to console (visible in Apps Script Executions)
-    console.error('Script Error:', error.toString());
-    
-    // Return error message for visual debugging in website console
-    return ContentService.createTextOutput("Error: " + error.toString()).setMimeType(ContentService.MimeType.TEXT);
+    return "Success";
+  } catch (e) {
+    return "Error in processLead: " + e.toString();
   }
 }
 
-/**
- * Email Helper Function
- */
 function sendLeadEmail(data) {
-  var subject = 'New Website LEAD: ' + (data.fname || 'Prospect');
-  
-  var body = 'You have a new enquiry from Sparfin Services:\n\n' +
+  var subject = '🚀 NEW LEAD: ' + (data.fname || 'Prospect') + ' (Sparfin)';
+  var body = 'You have a new lead from Sparfin Services website:\n\n' +
              '----------------------------------\n' +
-             'Name: ' + data.fname + '\n' +
-             'Phone: ' + data.phone + '\n' +
-             'City: ' + data.city + '\n' +
-             'Employment: ' + data.employment + '\n' +
-             'Loan Type: ' + data.loanType + '\n' +
-             'Loan Amount: ' + data.loanAmount + '\n' +
-             'Property Type: ' + (data.propType || 'N/A') + '\n' +
-             'Current Stage: ' + data.stage + '\n' +
-             'Pref. Contact: ' + data.prefContact + '\n' +
-             'Notes: ' + (data.notes || 'No extra notes') + '\n' +
-             '----------------------------------\n\n' +
-             'Sent from Sparfin Lead Automation Handler.';
+             'NAME: ' + data.fname + '\n' +
+             'PHONE: ' + data.phone + '\n' +
+             'CITY: ' + data.city + '\n' +
+             'EMPLOYMENT: ' + data.employment + '\n' +
+             'LOAN TYPE: ' + data.loanType + '\n' +
+             'AMOUNT: ' + data.loanAmount + '\n' +
+             'PROPERTY: ' + (data.propType || 'N/A') + '\n' +
+             'STAGE: ' + data.stage + '\n' +
+             'PREF. CONTACT: ' + data.prefContact + '\n' +
+             'NOTES: ' + (data.notes || '---') + '\n' +
+             '----------------------------------';
 
   try {
-    MailApp.sendEmail({
-      to: NOTIFICATION_EMAIL,
-      subject: subject,
-      body: body
+    GmailApp.sendEmail(NOTIFICATION_EMAIL, subject, body, {
+      from: 'sparfin.automation@gmail.com', // Optional: leave blank normally
+      name: 'Sparfin Automation'
     });
   } catch (e) {
-    console.error('Email failed: ' + e.message);
+    // Fallback if the 'from' or other parameters are locked
+    GmailApp.sendEmail(NOTIFICATION_EMAIL, subject, body);
   }
 }
