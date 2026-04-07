@@ -753,6 +753,37 @@ input[type=range]::-moz-range-track {
 .success-state h3 { font-family: 'Gilroy', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px; }
 .success-state p { color: var(--text2); font-size: 0.95rem; line-height: 1.6; }
 
+/* ─── FORM VALIDATION ───────────────────────────────────── */
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+    border-color: #ff4d4d !important;
+    background-color: #fff9f9;
+}
+.error-msg {
+    color: #ff4d4d;
+    font-size: 0.68rem;
+    font-weight: 600;
+    margin-top: 2px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    display: block;
+}
+.form-field.error .error-msg {
+    height: 14px;
+    opacity: 1;
+    margin-top: 4px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+.shake { animation: shake 0.3s ease-in-out; }
+
 /* ─── FOOTER ────────────────────────────────────────────── */
 footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: rgba(255,255,255,0.55); }
 .footer-top { padding: 60px 0 40px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }

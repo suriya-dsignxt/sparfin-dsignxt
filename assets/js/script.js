@@ -21,38 +21,128 @@ function toggleFooter(header) {
 }
 
 // ── Multi-step form
+// ── Multi-step form
 let currentStep = 1;
+
+// Helper: Show validation error
+function showError(fieldId, message) {
+  const field = document.getElementById(fieldId);
+  if (!field) return;
+  const parent = field.closest('.form-field');
+  if (!parent) return;
+  const errorSpan = parent.querySelector('.error-msg');
+  if (message && errorSpan) errorSpan.textContent = message;
+  parent.classList.add('error');
+}
+
+// Helper: Clear validation error
+function clearError(field) {
+  const parent = field.closest('.form-field');
+  if (parent) parent.classList.remove('error');
+}
+
+// Validation Logic per step
+function validateStep(step) {
+  let isValid = true;
+  
+  if (step === 1) {
+    const name = document.getElementById('fname');
+    const phone = document.getElementById('phone');
+    const city = document.getElementById('city');
+    const emp = document.getElementById('employment');
+
+    // Name: Min 3 letters
+    if (name.value.trim().length < 3) {
+      showError('fname', 'Name must be at least 3 characters.');
+      isValid = false;
+    }
+    
+    // Phone: Exactly 10 digits (ignoring spaces/dashes)
+    const phoneClean = phone.value.replace(/\D/g, '');
+    if (phoneClean.length < 10) {
+      showError('phone', 'Please enter a valid 10-digit number.');
+      isValid = false;
+    }
+
+    if (!city.value.trim()) {
+      showError('city', 'Please enter your city.');
+      isValid = false;
+    }
+
+    if (!emp.value) {
+      showError('employment', 'Please select an employment type.');
+      isValid = false;
+    }
+  }
+
+  if (step === 2) {
+    const lt = document.getElementById('loanType');
+    const la = document.getElementById('loanAmount');
+    
+    if (!lt.value) { showError('loanType', 'Please select a loan type.'); isValid = false; }
+    if (!la.value) { showError('loanAmount', 'Please select a loan range.'); isValid = false; }
+  }
+
+  if (step === 3) {
+    const stage = document.getElementById('stage');
+    const pref = document.getElementById('prefContact');
+    
+    if (!stage.value) { showError('stage', 'Please select your current stage.'); isValid = false; }
+    if (!pref.value) { showError('prefContact', 'Please select a contact preference.'); isValid = false; }
+  }
+
+  return isValid;
+}
+
 function nextStep(from) {
-  if (from === 1) {
-    const name = document.getElementById('fname').value;
-    const phone = document.getElementById('phone').value;
-    const emp = document.getElementById('employment').value;
-    if (!name.trim() || !phone.trim() || !emp) { alert('Please fill in all required fields.'); return; }
+  if (!validateStep(from)) {
+    // Add shake effect to the button for feedback
+    const btn = event.currentTarget;
+    if (btn) {
+      btn.classList.add('shake');
+      setTimeout(() => btn.classList.remove('shake'), 400);
+    }
+    return;
   }
-  if (from === 2) {
-    const lt = document.getElementById('loanType').value;
-    const la = document.getElementById('loanAmount').value;
-    if (!lt || !la) { alert('Please select a loan type and approximate amount.'); return; }
-  }
+  
   document.getElementById('step' + from).classList.remove('active');
   document.getElementById('step' + (from + 1)).classList.add('active');
   document.getElementById('prog' + (from + 1)).classList.add('active');
   currentStep = from + 1;
 }
+
 function prevStep(from) {
   document.getElementById('step' + from).classList.remove('active');
   document.getElementById('step' + (from - 1)).classList.add('active');
   document.getElementById('prog' + from).classList.remove('active');
   currentStep = from - 1;
 }
+
 function submitForm() {
-  const stage = document.getElementById('stage').value;
-  const pref = document.getElementById('prefContact').value;
-  if (!stage || !pref) { alert('Please select your current stage and contact preference.'); return; }
+  if (!validateStep(3)) {
+      const btn = event.currentTarget;
+      if (btn) {
+        btn.classList.add('shake');
+        setTimeout(() => btn.classList.remove('shake'), 400);
+      }
+      return;
+  }
   
   document.getElementById('formMain').style.display = 'none';
   document.getElementById('successState').classList.add('show');
 }
+
+// Real-time error clearing
+document.addEventListener('input', (e) => {
+  if (e.target.closest('.form-field.error')) {
+    clearError(e.target);
+  }
+});
+document.addEventListener('change', (e) => {
+  if (e.target.closest('.form-field.error')) {
+    clearError(e.target);
+  }
+});
 
 function updateLeadFormAndOpenModal() {
   const amount = parseFloat(document.getElementById('loanAmt').value);
