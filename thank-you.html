@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You – SPARFIN Services</title>
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #231191;
+            --navy2: #14085F;
+            --gold: #31CA83;
+            --white: #FFFFFF;
+            --text: #19214F;
+            --text2: #55637C;
+            --green: #23B874;
+            --accent-rgb: 49,202,131;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 24px;
+            overflow: hidden;
+            background: radial-gradient(circle at 10% 20%, rgba(49, 202, 131, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(35, 17, 145, 0.03) 0%, transparent 40%);
+        }
+
+        .thank-you-card {
+            max-width: 600px;
+            width: 100%;
+            background: #fff;
+            padding: 60px 40px;
+            border-radius: 32px;
+            box-shadow: 0 25px 60px rgba(35, 17, 145, 0.08);
+            border: 1.5px solid rgba(49, 202, 131, 0.1);
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideUp {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .success-icon {
+            width: 88px;
+            height: 88px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            box-shadow: 0 15px 35px rgba(49, 202, 131, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(49, 202, 131, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(49, 202, 131, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(49, 202, 131, 0); }
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: var(--navy);
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text2);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
+            border-radius: 99px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(35, 17, 145, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--navy2);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(35, 17, 145, 0.3);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ead52;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.25);
+        }
+
+        .check-svg { width: 44px; height: 44px; fill: #fff; }
+
+        @media (max-width: 576px) {
+            .thank-you-card { padding: 40px 24px; }
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-card">
+        <div class="success-icon">
+            <svg class="check-svg" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+        </div>
+        <h1>Submission Received!</h1>
+        <p>Thank you for reaching out to **SPARFIN Services**. Your loan enquiry has been successfully received. One of our senior advisors will contact you shortly to discuss your requirements.</p>
+        
+        <div class="cta-group">
+            <a href="https://wa.me/919381743934?text=Hi%20SPARFIN,%20I%20just%20submitted%20my%20loan%20enquiry.%20I'd%20like%20to%20discuss%20my%20requirement." class="btn btn-whatsapp">
+                Chat with Advisor on WhatsApp →
+            </a>
+            <a href="index.html" class="btn btn-primary">
+                Return to Website
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

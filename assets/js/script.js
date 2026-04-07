@@ -1,3 +1,6 @@
+// ── Configuration (Enter your Google Apps Script Web App URL here)
+const APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
   const h = document.querySelector('.hamburger');
@@ -118,9 +121,11 @@ function prevStep(from) {
   currentStep = from - 1;
 }
 
-function submitForm() {
+function submitForm(event) {
+  if (event) event.preventDefault();
+  
   if (!validateStep(3)) {
-      const btn = event.currentTarget;
+      const btn = document.querySelector('.btn-cta-submit');
       if (btn) {
         btn.classList.add('shake');
         setTimeout(() => btn.classList.remove('shake'), 400);
@@ -128,8 +133,51 @@ function submitForm() {
       return;
   }
   
-  document.getElementById('formMain').style.display = 'none';
-  document.getElementById('successState').classList.add('show');
+  const submitBtn = document.querySelector('.btn-cta-submit');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = 'Submitting... <span class="spinner"></span>';
+  
+  // Collect all data
+  const formData = {
+    fname: document.getElementById('fname').value,
+    phone: document.getElementById('phone').value,
+    city: document.getElementById('city').value,
+    employment: document.getElementById('employment').value,
+    loanType: document.getElementById('loanType').value,
+    loanAmount: document.getElementById('loanAmount').value,
+    propType: document.getElementById('propType').value,
+    stage: document.getElementById('stage').value,
+    prefContact: document.getElementById('prefContact').value,
+    notes: document.getElementById('notes').value,
+    source: 'Lead Enquiry Modal'
+  };
+
+  // If APPS_SCRIPT_URL is not set, just show local success (for testing)
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_GOOGLE')) {
+    console.warn('Apps Script URL is not configured. Redirecting to thank-you.html locally.');
+    setTimeout(() => {
+      window.location.href = 'thank-you.html';
+    }, 1000);
+    return;
+  }
+
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors', // standard for GAS
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  })
+  .then(() => {
+    // Redirect to Thank You page
+    window.location.href = 'thank-you.html';
+  })
+  .catch(err => {
+    console.error('Submission Error:', err);
+    alert('Oops! Something went wrong. Please try again or contact us directly.');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+  });
 }
 
 // Real-time error clearing
