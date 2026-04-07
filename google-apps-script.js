@@ -1,3 +1,14 @@
+// ── SETUP INSTRUCTIONS ──────────────────────────────────────────────────
+// 1. In your Google Sheet (sparfin_forms_sheet), go to "Extensions" > "Apps Script".
+// 2. Delete any existing code in the editor and PASTE THIS ENTIRE FILE.
+// 3. Click the "Deploy" button (top right) > "New deployment".
+// 4. Select Type: "Web App".
+// 5. Description: "Sparfin Lead Form Handler".
+// 6. Execute as: "Me" (your email).
+// 7. Who has access: "Anyone" (Required for the website to send data).
+// 8. Click "Deploy". You'll get a "Web App URL" (ends in /exec).
+// 9. COPY that URL and paste it into assets/js/script.js.
+
 // ── Configuration ──────────────────────────────────────────────────────
 var NOTIFICATION_EMAIL = 'ceo@fenzo.co, suriya@dsignxt.com'; // ← Change this to your preferred emails
 var SHEET_NAME_LEADS = 'Website Leads'; // The name of the tab in your Google Sheet

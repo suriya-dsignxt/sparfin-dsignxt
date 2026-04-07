@@ -961,3 +961,30 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 .q-icon { font-size: 3rem; margin-bottom: 24px; }
 .quick-enquiry-card h3 { font-family: 'Gilroy', sans-serif; font-size: 1.8rem; margin-bottom: 16px; color: var(--gold-lt); }
 .quick-enquiry-card p { color: rgba(255,255,255,0.82); margin-bottom: 32px; line-height: 1.6; }
+
+/* ── FORM VALIDATION & LOADING ──────────────────────────────── */
+.error .error-msg { display: block; }
+.error .form-field input, .error .form-field select { border-color: #ff4d4d !important; background-color: #fffafa !important; }
+.error-msg { color: #ff4d4d; font-size: 0.72rem; font-weight: 600; margin-top: 4px; display: none; }
+
+.shake { animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

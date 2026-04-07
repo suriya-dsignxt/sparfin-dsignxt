@@ -1,5 +1,5 @@
-// ── Configuration (Enter your Google Apps Script Web App URL here)
-const APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+// ── Configuration (Enter your Google Apps Script Web App URL here after deployment)
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw9jN8XVQXVSzR8C3lWf1PxxUxFZEyXKe8ZqEh13bAUGN6Z6HCWqi3IP2G9csjLtu88/exec';
 
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
@@ -135,8 +135,6 @@ function submitForm(event) {
   
   const submitBtn = document.querySelector('.btn-cta-submit');
   const originalText = submitBtn.innerHTML;
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = 'Submitting... <span class="spinner"></span>';
   
   // Collect all data
   const formData = {
@@ -153,29 +151,41 @@ function submitForm(event) {
     source: 'Lead Enquiry Modal'
   };
 
-  // If APPS_SCRIPT_URL is not set, just show local success (for testing)
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_GOOGLE')) {
-    console.warn('Apps Script URL is not configured. Redirecting to thank-you.html locally.');
+  // UI Feedback: Start Loading
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.8';
+  submitBtn.innerHTML = 'Sending... <span class="spinner"></span>';
+  
+  const finishSubmission = () => {
+    submitBtn.innerHTML = 'Success! Redirecting...';
+    submitBtn.style.backgroundColor = '#23B874';
     setTimeout(() => {
       window.location.href = 'thank-you.html';
-    }, 1000);
+    }, 800);
+  };
+
+  // If APPS_SCRIPT_URL is not set or still a placeholder, simulate success for preview
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('PASTE_YOUR') || APPS_SCRIPT_URL.includes('YOUR_GOOGLE')) {
+    console.warn('Apps Script URL is not configured. Simulating local success.');
+    setTimeout(finishSubmission, 1500);
     return;
   }
 
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    mode: 'no-cors', // standard for GAS
+    mode: 'no-cors', 
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
   })
   .then(() => {
-    // Redirect to Thank You page
-    window.location.href = 'thank-you.html';
+    finishSubmission();
   })
   .catch(err => {
     console.error('Submission Error:', err);
-    alert('Oops! Something went wrong. Please try again or contact us directly.');
+    alert('Oops! Something went wrong. Please check your internet connection and try again.');
     submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.style.backgroundColor = '';
     submitBtn.innerHTML = originalText;
   });
 }
