@@ -49,7 +49,7 @@ button { font-family: inherit; cursor: pointer; border: none; outline: none; }
 
 /* ─── STICKY NAV ────────────────────────────────────────── */
 nav {
-  position: sticky; top: 0; z-index: 999;
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 999;
   background: rgba(255,255,255,0.97);
   border-bottom: 1px solid rgba(var(--navy-rgb),0.08);
   box-shadow: 0 8px 24px rgba(17,24,39,0.06);
@@ -161,6 +161,7 @@ a.c-value:hover { color: var(--navy2); text-decoration: underline; }
 #hero {
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
   padding: 100px 0;
+  margin-top: 72px;
   position: relative; overflow: hidden;
 }
 #hero::before {
@@ -257,10 +258,16 @@ a.c-value:hover { color: var(--navy2); text-decoration: underline; }
   border-radius: 16px; 
   padding: 16px 20px; 
   display: flex; align-items: center; justify-content: space-between;
-  border: 2px solid rgba(4, 70, 16, 0.05);
-  transition: all 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
 }
-.loan-item:hover { background: rgba(5, 2, 38, 0.821); border: 1px solid rgba(3, 191, 38, 0.857);;transform: translateX(3px); }
+.loan-item:hover { 
+  background: rgba(5, 2, 38, 0.85); 
+  border-color: rgba(56, 212, 141, 0.6);
+  transform: translateX(6px); 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
 .loan-name { color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
 .loan-desc { color: #38d48d; font-size: 0.78rem; font-weight: 600; }
