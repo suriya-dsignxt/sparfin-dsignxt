@@ -173,34 +173,18 @@ function submitForm(event) {
 
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    mode: 'cors', // changed from no-cors to see the ACTUAL response
+    mode: 'no-cors', // Standard for Google Apps Script to avoid CORS preflight errors
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
   })
-  .then(response => {
-    if (!response.ok) throw new Error('Network response was not ok');
-    return response.text();
-  })
-  .then(result => {
-    if (result.includes('Error')) {
-      console.error('Server side error:', result);
-      throw new Error(result);
-    }
-    console.log('Script successful:', result);
+  .then(() => {
+    // With no-cors, we can't read the response, but we assume success if no network error
+    console.log('Form submission sequence completed.');
     finishSubmission();
   })
   .catch(err => {
     console.error('Submission Error:', err);
-    
-    // Fallback: If it's a CORS error (very common with GAS), it might still have succeeded
-    // We check if the status is 0 (opaque) or if it's the expected error type
-    if (err.message.includes('Network response') || err.message.includes('CORS')) {
-      console.warn('Possible CORS issue, but data might have been sent. Redirecting to success.');
-      finishSubmission();
-      return;
-    }
-
-    alert('Oops! Something went wrong: ' + err.message);
+    alert('Oops! Submission failed. Please check your connection or contact us directly.');
     submitBtn.disabled = false;
     submitBtn.style.opacity = '1';
     submitBtn.style.backgroundColor = '';
