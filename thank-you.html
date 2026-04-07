@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You – SPARFIN Services</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- DM Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- DotLottie Player -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <style>
         :root {
             --navy: #231191;
@@ -61,10 +65,13 @@
         }
 
         .lottie-container {
-            width: 160px;
-            height: 160px;
-            margin: -40px auto 20px;
+            width: 140px;
+            height: 140px;
+            margin: -20px auto 30px;
             pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
@@ -74,7 +81,7 @@
             font-weight: 700;
             letter-spacing: -0.03em;
             opacity: 0;
-            animation: fadeIn 0.8s ease out 0.4s forwards;
+            animation: fadeIn 0.8s ease-out 0.4s forwards;
         }
 
         p {
@@ -83,7 +90,7 @@
             line-height: 1.8;
             margin-bottom: 44px;
             opacity: 0;
-            animation: fadeIn 0.8s ease out 0.6s forwards;
+            animation: fadeIn 0.8s ease-out 0.6s forwards;
         }
 
         @keyframes fadeIn {
@@ -95,7 +102,7 @@
             flex-direction: column;
             gap: 18px;
             opacity: 0;
-            animation: fadeIn 0.8s ease out 0.8s forwards;
+            animation: fadeIn 0.8s ease-out 0.8s forwards;
         }
 
         .btn {
@@ -135,15 +142,13 @@
             box-shadow: 0 20px 40px rgba(37, 211, 102, 0.25);
         }
 
-        .check-svg { width: 44px; height: 44px; fill: #fff; }
-
         .brand-logo {
             font-weight: 800;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.2em;
             color: var(--gold);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             display: block;
         }
 
@@ -151,7 +156,7 @@
             .thank-you-card { padding: 50px 24px; border-radius: 32px; }
             h1 { font-size: 2.1rem; }
             p { font-size: 1.05rem; }
-            .lottie-container { width: 120px; height: 120px; margin-top: -30px; }
+            .lottie-container { width: 120px; height: 120px; }
         }
     </style>
 </head>
@@ -161,7 +166,14 @@
         <span class="brand-logo">SPARFIN Services</span>
         
         <div class="lottie-container">
-            <iframe src="https://lottie.host/embed/edc60656-78e7-4933-8a3c-3965511b0e98/m66YhPof8T.lottie?bg=transparent&loop=0&autoplay=1" style="border:none; width:100%; height:100%;"></iframe>
+            <!-- Using a stable public JSON checkmark animation -->
+            <dotlottie-player 
+                src="https://lottie.host/9b85edc4-42f4-406e-826a-93e116bc37e8/2A48K34qZ6.json" 
+                background="transparent" 
+                speed="1" 
+                style="width: 100%; height: 100%;" 
+                autoplay>
+            </dotlottie-player>
         </div>
 
         <h1>Success!</h1>
