@@ -105,26 +105,45 @@ function formatINR(n) {
 function formatINRFull(n) {
   return '₹' + Math.round(n).toLocaleString('en-IN');
 }
+function updateSliderProgress(el) {
+  const min = el.min || 0;
+  const max = el.max || 100;
+  const val = el.value;
+  const percent = ((val - min) / (max - min)) * 100;
+  el.style.setProperty('--range-progress', percent + '%');
+}
+
 function calcEMI() {
-  const P = parseFloat(document.getElementById('loanAmt').value);
-  const r = parseFloat(document.getElementById('intRate').value) / 12 / 100;
-  const n = parseInt(document.getElementById('tenure').value) * 12;
+  const loanAmt = document.getElementById('loanAmt');
+  const intRate = document.getElementById('intRate');
+  const tenure = document.getElementById('tenure');
+
+  const P = parseFloat(loanAmt.value);
+  const r = parseFloat(intRate.value) / 12 / 100;
+  const n = parseInt(tenure.value) * 12;
   const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
   const totalAmt = emi * n;
   const totalInt = totalAmt - P;
+
+  // Update Result Display
   document.getElementById('emiResult').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
   document.getElementById('breakPrincipal').textContent = formatINR(P);
   document.getElementById('breakInterest').textContent = formatINRFull(totalInt);
   document.getElementById('breakTotal').textContent = formatINRFull(totalAmt);
-  document.getElementById('breakTenure').textContent = document.getElementById('tenure').value + ' Years';
+  document.getElementById('breakTenure').textContent = tenure.value + ' Years';
+
+  // Update Slider Visuals
+  updateSliderProgress(loanAmt);
+  updateSliderProgress(intRate);
+  updateSliderProgress(tenure);
 
   const loanVal = document.getElementById('loanAmtVal');
   const rateVal = document.getElementById('intRateVal');
   const tenVal = document.getElementById('tenureVal');
 
   if (document.activeElement !== loanVal) loanVal.value = formatINR(P);
-  if (document.activeElement !== rateVal) rateVal.value = parseFloat(document.getElementById('intRate').value).toFixed(1) + '%';
-  if (document.activeElement !== tenVal) tenVal.value = document.getElementById('tenure').value + ' Yrs';
+  if (document.activeElement !== rateVal) rateVal.value = parseFloat(intRate.value).toFixed(1) + '%';
+  if (document.activeElement !== tenVal) tenVal.value = tenure.value + ' Yrs';
 }
 
 // Wait for DOM to load
@@ -183,5 +202,57 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
       });
+    });
+});// ── Scroll Spy
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  const options = { threshold: 0.5, rootMargin: '-72px 0px 0px 0px' };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, options);
+  
+  sections.forEach(section => observer.observe(section));
+});
+
+// Scroll to sections on link click
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        if (!this.getAttribute('href').startsWith('#')) return;
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const offset = 72; // Nav height
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = targetElement.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            const m = document.getElementById('mobileMenu');
+            const h = document.querySelector('.hamburger');
+            if (m.classList.contains('open')) {
+                m.classList.remove('open');
+                h.classList.remove('active');
+            }
+        }
     });
 });
