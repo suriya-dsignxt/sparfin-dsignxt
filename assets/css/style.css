@@ -817,7 +817,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
     align-items: flex-end;
 }
 
@@ -835,11 +835,10 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     cursor: pointer;
 }
 
-.qa-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: #fff;
+.qa-btn img {
+    object-fit: contain;
 }
+
 
 .qa-btn-call {
     background: #1A0C74;
@@ -928,6 +927,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     width: 24px;
     height: 24px;
     margin-bottom: 2px;
+    object-fit: contain;
 }
 
 .ma-item span {
@@ -938,13 +938,8 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     letter-spacing: 0.02em;
 }
 
-/* Specific icon colors in mobile bar should lead-eye */
-.ma-item-call .ma-icon { color: #1A0C74; }
-.ma-item-wa .ma-icon { color: #25D366; }
-.ma-item-enquire .ma-icon { color: #32B87D; }
-
-
 @media (max-width: 768px) {
+
     .qa-floating-group {
         display: none; /* Hide floating on mobile */
     }
