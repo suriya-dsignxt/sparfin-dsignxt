@@ -661,7 +661,8 @@ input[type=range]::-moz-range-track {
     transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(56, 212, 141, 0.35);
 }
-.btn-calc-cta:active { transform: translateY(0) scale(0.98); transition-duration: 0.1s; }
+.btn-calc-cta:active { transform: translateY(0) scale(0.98);
+    box-shadow: 0 15px 30px rgba(56, 212, 141, 0.35); transition-duration: 0.1s; }
 
 /* ─── BANKS ─────────────────────────────────────────────── */
 #banks { padding: 60px 0; background: linear-gradient(180deg, #eefaf4 0%, #f7fffb 100%); }
