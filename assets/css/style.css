@@ -131,7 +131,7 @@ nav.scrolled .nav-inner {
 .nav-links a:hover { color: var(--navy2); }
 .nav-cta { display: flex; gap: 12px; align-items: center; }
 .nav.c-value { color: var(--navy); font-weight: 600; font-size: 1rem; line-height: 1.5; text-decoration: none; display: block; transition: color 0.2s; }
-
+a.c-value:hover { color: var(--gold);}
 .nav-phone { color: var(--navy); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; text-decoration: none; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .nav-phone:hover { color: var(--navy2); transform: translateY(-1px); }
 .nav-btn { 
@@ -708,7 +708,9 @@ input[type=range]::-moz-range-track {
 .c-icon img { width: 26px; height: 26px; object-fit: contain; }
 .contact-row:hover .c-icon { background: rgba(var(--accent-rgb),0.15); border-color: rgba(var(--accent-rgb),0.3); transform: scale(1.05); }
 .c-label { font-size: 0.78rem; color: rgba(255,255,255,0.68); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.08em; }
-.c-value { color: #fff; font-size: 0.95rem; font-weight: 500; }
+.c-value { color: #fff; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; }
+.contact-row:hover .c-value { color: var(--gold); }
+.contact-row:hover .c-label { color: rgba(255,255,255,0.9); }
 .whatsapp-box { margin-top: 20px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25); border-radius: 20px; padding: 24px; display: flex; align-items: center; gap: 16px; width: 100%; }
 .whatsapp-box p { color: rgba(255,255,255,0.82); font-size: 0.85rem; }
 .whatsapp-box strong { color: #fff; display: block; margin-bottom: 4px; }
