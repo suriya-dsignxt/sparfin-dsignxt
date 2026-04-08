@@ -809,13 +809,144 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 .disclaimer { background: #090329; padding: 18px 0; }
 .disclaimer p { font-size: 0.72rem; color: rgba(255,255,255,0.3); line-height: 1.65; text-align: center; }
 
-/* ─── FLOATING WHATSAPP ─────────────────────────────────── */
-.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 998; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,0.45); transition: all 0.25s; animation: waFloat 2.5s ease-in-out infinite; }
-.wa-float:hover { transform: scale(1.1); }
-.wa-float svg { width: 28px; height: 28px; fill: #fff; }
-@keyframes waFloat { 0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); } 50% { box-shadow: 0 10px 36px rgba(37,211,102,0.65); } }
-.wa-tooltip { position: absolute; right: 66px; background: var(--navy2); color: #fff; font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 8px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
-.wa-float:hover .wa-tooltip { opacity: 1; }
+/* ─── QUICK ACTIONS (FLOATING & MOBILE BAR) ───────────────── */
+.qa-floating-group {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.qa-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+}
+
+.qa-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.qa-btn-call {
+    background: var(--navy);
+    border: 2.5px solid rgba(255,255,255,0.15);
+}
+
+.qa-btn-enquiry {
+    background: var(--green);
+    border: 2.5px solid rgba(255,255,255,0.15);
+}
+
+.qa-btn-wa {
+    background: #25D366;
+    animation: waPulse 2.5s infinite;
+}
+
+@keyframes waPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.qa-btn:hover {
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.qa-tooltip {
+    position: absolute;
+    right: 64px;
+    background: var(--navy2);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.qa-btn:hover .qa-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Mobile Sticky Bar */
+.mobile-action-bar {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.1);
+    z-index: 2000;
+    padding: 10px 0 calc(env(safe-area-inset-bottom) + 12px);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+
+.ma-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    border-right: 1px solid rgba(0,0,0,0.06);
+}
+
+.ma-item:last-child {
+    border-right: none;
+}
+
+.ma-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+
+.ma-item span {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* Specific icon colors */
+.ma-item-call .ma-icon { color: var(--navy); }
+.ma-item-wa .ma-icon { color: #25D366; }
+.ma-item-enquire .ma-icon { color: var(--green); }
+
+@media (max-width: 768px) {
+    .qa-floating-group {
+        display: none; /* Hide floating on mobile */
+    }
+    .mobile-action-bar {
+        display: grid;
+    }
+}
+
 
 /* ─── ANIMATIONS ────────────────────────────────────────── */
 .reveal {
