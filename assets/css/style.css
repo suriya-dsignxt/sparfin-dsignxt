@@ -737,15 +737,15 @@ input[type=range]::-moz-range-track {
 .form-field label { font-size: 0.8rem; font-weight: 600; color: var(--text); }
 .form-field input,
 .form-field select,
-.form-field textarea { font-family: 'DM Sans', sans-serif; font-size: 16px; padding: 11px 14px; border: 1.5px solid var(--gray2); border-radius: 0; color: var(--text); background: #fff; transition: border 0.2s; outline: none; width: 100%; }
+.form-field textarea { font-family: 'DM Sans', sans-serif; font-size: 16px; padding: 11px 14px; border: 1.5px solid var(--gray2); border-radius: 12px; color: var(--text); background: #fff; transition: border 0.2s; outline: none; width: 100%; }
 .form-field input:focus,
 .form-field select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.12); }
 .form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239BA3B8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
 .form-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
 .form-back { color: var(--text2); font-size: 0.88rem; font-weight: 500; background: none; border: none; cursor: pointer; }
-.form-next { background: var(--gold); color: #fff; font-weight: 600; font-size: 0.9rem; padding: 12px 28px; border-radius: 0; transition: all 0.2s; }
+.form-next { background: var(--gold); color: #fff; font-weight: 600; font-size: 0.9rem; padding: 12px 28px; border-radius: 12px; transition: all 0.2s; }
 .form-next:hover { background: #20b26e; }
-.form-submit { width: 100%; background: var(--navy); color: #fff; font-weight: 700; font-size: 1rem; padding: 15px; border-radius: 0; transition: all 0.2s; letter-spacing: 0.02em; }
+.form-submit { width: 100%; background: var(--navy); color: #fff; font-weight: 700; font-size: 1rem; padding: 15px; border-radius: 12px; transition: all 0.2s; letter-spacing: 0.02em; }
 .form-submit:hover { background: var(--navy2); }
 .form-privacy { font-size: 0.72rem; color: var(--gray3); margin-top: 10px; text-align: center; line-height: 1.5; }
 .form-privacy a { color: var(--gold); }
@@ -1079,7 +1079,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .hero-cta-bar { padding: 12px 14px; font-size: 0.78rem; border-radius: 10px; }
   .cta-link { font-size: 0.88rem; gap: 4px; }
   .modal-overlay { padding: 10px; }
-  .modal-content { border-radius: 0; }
+  .modal-content { border-radius: 16px; }
 }
 
 /* ═══ MODAL ══════════════════════════════════════════════ */
@@ -1088,7 +1088,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .modal-content { 
-  background: #fff; border-radius: 0; max-width: 600px; width: 100%; position: relative; max-height: 90vh; overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.7); border: none; 
+  background: #fff; border-radius: 20px; max-width: 600px; width: 100%; position: relative; max-height: 90vh; overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.7); border: none; 
 }
 /* Thinner rounded green scrollbar for lead modal */
 .modal-content::-webkit-scrollbar { width: 4px; }
@@ -1117,7 +1117,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   box-shadow: 0 15px 45px rgba(0,0,0,0.4);
 }
 
-.quick-enquiry-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(var(--accent-rgb),0.16); padding: 40px; border-radius: 0; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s; box-shadow: 0 20px 50px rgba(5,8,40,0.12); }
+.quick-enquiry-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(var(--accent-rgb),0.16); padding: 40px; border-radius: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s; box-shadow: 0 20px 50px rgba(5,8,40,0.12); }
 .quick-enquiry-card:hover { border-color: var(--gold); background: rgba(255,255,255,0.08); }
 .q-icon { font-size: 3rem; margin-bottom: 24px; }
 .quick-enquiry-card h3 { font-family: 'Gilroy', sans-serif; font-size: 1.8rem; margin-bottom: 16px; color: var(--gold-lt); }
@@ -1178,7 +1178,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 
 .pp-modal {
   background: #fff;
-  border-radius: 0;
+  border-radius: 20px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
@@ -1263,7 +1263,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   width: 44px; height: 44px;
   background: rgba(56, 212, 141, 0.15);
   border: 1px solid rgba(56, 212, 141, 0.25);
-  border-radius: 0;
+  border-radius: 12px;
   color: #38d48d;
   font-size: 0.85rem;
   font-weight: 800;
@@ -1301,7 +1301,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 .pp-date-item {
   background: var(--gray1);
   border: 1px solid var(--gray2);
-  border-radius: 0;
+  border-radius: 10px;
   padding: 12px 20px;
   font-size: 0.82rem;
   color: var(--text2);
@@ -1401,7 +1401,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   border-collapse: separate;
   border-spacing: 0;
   margin-top: 16px;
-  border-radius: 0;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--gray2);
 }
@@ -1461,7 +1461,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--gray2);
-  border-radius: 0;
+  border-radius: 12px;
   overflow: hidden;
 }
 .pp-contact-table tr { transition: background 0.2s; }
@@ -1543,8 +1543,8 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .pp-header { padding: 32px 24px 28px; }
   .pp-header-title { font-size: 1.5rem; }
   .pp-body { padding: 24px 20px 32px; }
-  .pp-modal { border-radius: 0; max-height: 80vh; overflow-y: auto; }
-  .pp-header { border-radius: 0; }
+  .pp-modal { border-radius: 20px; max-height: 80vh; overflow-y: auto; overscroll-behavior: contain; }
+  .pp-header { border-radius: 20px 20px 0 0; }
   .pp-date-bar { flex-direction: column; gap: 10px; }
   .pp-date-item { min-width: unset; }
   .pp-label-cell, .pp-right-label, .pp-contact-label { width: auto; white-space: normal; }
