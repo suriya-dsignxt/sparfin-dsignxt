@@ -50,32 +50,12 @@ button { font-family: inherit; cursor: pointer; border: none; outline: none; }
 }
 .btn-primary:active { transform: translateY(0) scale(0.97); transition-duration: 0.1s; }
 
-.btn-outline { 
-  display: inline-flex; align-items: center; gap: 8px; 
-  background: transparent; color: var(--navy); font-weight: 600; font-size: 0.95rem; 
-  padding: 13px 26px; border-radius: 8px; border: 2px solid var(--navy); 
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
-}
-.btn-outline:hover { 
-  background: rgba(var(--navy-rgb), 0.02);
-  transform: translateY(-3px); 
-  box-shadow: 0 10px 25px rgba(var(--navy-rgb),0.12); 
-}
+.btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--navy); font-weight: 600; font-size: 0.95rem; padding: 13px 26px; border-radius: 8px; border: 2px solid var(--navy); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.btn-outline:hover { background: var(--navy); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(var(--navy-rgb),0.12); }
 .btn-outline:active { transform: translateY(0) scale(0.97); transition-duration: 0.1s; }
 
-.btn-outline-light { 
-  display: inline-flex; align-items: center; gap: 8px;
-  color: #fff; background: transparent; 
-  padding: 13px 26px; border-radius: 8px;
-  border: 1.5px solid rgba(255,255,255,0.4); 
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
-}
-.btn-outline-light:hover { 
-  background: rgba(255,255,255,0.08); 
-  border-color: #fff; 
-  transform: translateY(-3px); 
-  box-shadow: 0 10px 25px rgba(255,255,255,0.15);
-}
+.btn-outline-light { color: #fff; border-color: rgba(255,255,255,0.3); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.btn-outline-light:hover { background: rgba(255,255,255,0.12); border-color: rgba(var(--accent-rgb),0.6); color: #fff; transform: translateY(-2px); }
 
 .btn-whatsapp { 
   display: inline-flex; align-items: center; gap: 8px; 
@@ -151,7 +131,7 @@ nav.scrolled .nav-inner {
 .nav-links a:hover { color: var(--navy2); }
 .nav-cta { display: flex; gap: 12px; align-items: center; }
 .nav.c-value { color: var(--navy); font-weight: 600; font-size: 1rem; line-height: 1.5; text-decoration: none; display: block; transition: color 0.2s; }
-a.c-value:hover { color: var(--navy2); text-decoration: underline; }
+a.c-value:hover { color: var(--gold); text-decoration: underline; }
 .nav-phone { color: var(--navy); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; text-decoration: none; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .nav-phone:hover { color: var(--navy2); transform: translateY(-1px); }
 .nav-btn { 
