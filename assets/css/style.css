@@ -940,7 +940,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 
 @media (max-width: 1440px) {
     .qa-btn {
-        width: 36px;
+        width: 42px;
         height: 36px;
     }
     .qa-btn img {
@@ -949,7 +949,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     }
     .qa-floating-group {
         gap: 12px;
-        bottom: 20px;
+        bottom: 40px;
         right: 20px;
     }
 }
