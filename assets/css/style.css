@@ -451,7 +451,7 @@ a.c-value:hover { color: var(--gold);}
 .about-card:hover { background: #fff; border-color: var(--teal); border-top-color: var(--teal); transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
 .about-card h3 { color: var(--navy); font-size: 1.2rem; margin-bottom: 12px; }
 .about-card p { color: var(--text2); font-size: 0.95rem; line-height: 1.6; }
-.about-card .why-num { font-size: 2.5rem; font-weight: 800; color: rgba(220,165,58,0.25); margin-bottom: 16px; line-height: 1; }
+.about-card .why-num { font-size: 2.5rem; font-weight: 800; color: rgb(0, 3, 156); margin-bottom: 16px; line-height: 1; }
 
 /* ─── PROCESS ───────────────────────────────────────────── */
 #process { padding: 90px 0; background: var(--cream); }
@@ -996,10 +996,11 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .container { padding: 0 22px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
-  .nav-inner { height: 72px; padding: 0 22px; }
+  .nav-inner { height: 72px; padding: 0; }
   .logo-badge { width: 120px; height: 80px; }
   .hero-title { font-size: 2.2rem; }
   .hero-sub { font-size: 1rem; }
+  .about-section, #why, #process, #testimonials, #calculator, #contact, #faq { padding: 50px 0 !important; }
   .why-grid, .grid-3, .grid-4, .process-steps { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card { flex: 0 1 100%; }
@@ -1541,7 +1542,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .pp-header { padding: 32px 24px 28px; }
   .pp-header-title { font-size: 1.5rem; }
   .pp-body { padding: 24px 20px 32px; }
-  .pp-modal { border-radius: 16px; }
+  .pp-modal { border-radius: 16px; max-height: 80vh; overflow-y: auto; }
   .pp-header { border-radius: 16px 16px 0 0; }
   .pp-date-bar { flex-direction: column; gap: 10px; }
   .pp-date-item { min-width: unset; }
@@ -1560,7 +1561,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   }
   .pp-wrapper, .modal-wrapper {
     position: relative;
-    margin-top: -80px;
+    margin-top: -20px;
   }
 }
 
