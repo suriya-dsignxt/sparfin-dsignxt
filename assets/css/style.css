@@ -330,7 +330,7 @@ a.c-value:hover { color: var(--gold);}
 }
 .hero-cta-bar:hover { 
   transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(20, 8, 95, 0.3);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
 }
 .hero-cta-bar:hover .cta-link { color: #fff !important; }
 .cta-link { font-weight: 800; border-bottom: none; display: flex; align-items: center; gap: 8px; }
