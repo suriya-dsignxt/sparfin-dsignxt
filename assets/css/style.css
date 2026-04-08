@@ -830,7 +830,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(9, 186, 101, 0.919);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     cursor: pointer;
@@ -843,19 +843,19 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 
 .qa-btn-call {
     background: #25D366;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(9, 186, 101, 0.919);
     border: none;
 }
 
 .qa-btn-enquiry {
     background: #25D366;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(9, 186, 101, 0.919);
     border: none;
 }
 
 .qa-btn-wa {
     background: #25D366;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(9, 186, 101, 0.919);
 }
 
 @keyframes waPulse {
@@ -866,7 +866,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 
 .qa-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 0 14px rgba(0,0,0,0.05), 0 8px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 14px rgba(2, 112, 8, 0.05), 0 8px 25px rgba(4, 97, 37, 0.3);
 }
 
 
