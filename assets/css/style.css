@@ -711,7 +711,11 @@ input[type=range]::-moz-range-track {
 .c-value { color: #fff; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; }
 .contact-row:hover .c-value { color: var(--gold); }
 .contact-row:hover .c-label { color: rgba(255,255,255,0.9); }
-.whatsapp-box { margin-top: 20px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25); border-radius: 20px; padding: 24px; display: flex; align-items: center; gap: 16px; width: 100%; }
+.whatsapp-box { 
+  margin-top: 20px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25); 
+  border-radius: 20px; padding: 24px; display: flex; align-items: center; gap: 16px; width: 100%; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+.whatsapp-box:hover { transform: translateY(-5px); background: rgba(37,211,102,0.14); border-color: rgba(37,211,102,0.4); box-shadow: 0 15px 35px rgba(5,8,40,0.15); }
 .whatsapp-box p { color: rgba(255,255,255,0.82); font-size: 0.85rem; }
 .whatsapp-box strong { color: #fff; display: block; margin-bottom: 4px; }
 
