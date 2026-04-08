@@ -245,6 +245,81 @@ document.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
 });
 
+// ── Privacy Policy Modal
+function openPrivacyModal() {
+    const modal = document.getElementById('privacyModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePrivacyModal() {
+    const modal = document.getElementById('privacyModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close privacy modal on outside click
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('privacyModal');
+    if (e.target === modal) closePrivacyModal();
+});
+
+// Close privacy modal on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const ppModal = document.getElementById('privacyModal');
+        if (ppModal && ppModal.classList.contains('active')) {
+            closePrivacyModal();
+        }
+        const tosModal = document.getElementById('termsModal');
+        if (tosModal && tosModal.classList.contains('active')) {
+            closeTermsModal();
+        }
+        const discModal = document.getElementById('disclaimerModal');
+        if (discModal && discModal.classList.contains('active')) {
+            closeDisclaimerModal();
+        }
+    }
+});
+
+// ── Terms of Service Modal
+function openTermsModal() {
+    const modal = document.getElementById('termsModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTermsModal() {
+    const modal = document.getElementById('termsModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close terms modal on outside click
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('termsModal');
+    if (e.target === modal) closeTermsModal();
+});
+
+// ── Disclaimer Modal
+function openDisclaimerModal() {
+    const modal = document.getElementById('disclaimerModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDisclaimerModal() {
+    const modal = document.getElementById('disclaimerModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close disclaimer modal on outside click
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('disclaimerModal');
+    if (e.target === modal) closeDisclaimerModal();
+});
+
 // ── EMI Calculator
 function formatINR(n) {
   if (n >= 10000000) return '₹' + (n / 10000000).toFixed(1) + 'Cr';

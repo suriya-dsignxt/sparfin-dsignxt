@@ -800,9 +800,9 @@
         <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.06);padding:20px 24px;max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
             <p>© 2026 SPARFIN Services LLP. All rights reserved.</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Disclaimer</a>
+                <a href="javascript:void(0)" onclick="openPrivacyModal()">Privacy Policy</a>
+                <a href="javascript:void(0)" onclick="openTermsModal()">Terms of Service</a>
+                <a href="javascript:void(0)" onclick="openDisclaimerModal()">Disclaimer</a>
             </div>
         </div>
         <div class="disclaimer">
@@ -822,9 +822,10 @@
     <script src="assets/js/script.js"></script>
     <!-- ═══ MODAL OVERLAY ══════════════════════════════════ -->
     <div class="modal-overlay" id="leadModal">
-        <div class="modal-content">
+        <div class="modal-wrapper">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div class="lead-form-card" id="leadForm" style="margin:0; box-shadow:none;">
+            <div class="modal-content">
+                <div class="lead-form-card" id="leadForm" style="margin:0; box-shadow:none;">
                 <div id="formMain">
                     <div class="form-title">Get Free Loan Advice</div>
                     <div class="form-sub">Takes 2 minutes · No obligation · 100% confidential</div>
@@ -968,7 +969,7 @@
                             <button class="form-submit btn-cta-submit" onclick="submitForm(event)">
                                 🔒 Submit — Get Free Advice
                             </button>
-                            <p class="form-privacy">By submitting, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>. Your data is secure and will never be sold.</p>
+                            <p class="form-privacy">By submitting, you agree to our <a href="javascript:void(0)" onclick="openPrivacyModal()">Privacy Policy</a> and <a href="javascript:void(0)" onclick="openTermsModal()">Terms of Service</a>. Your data is secure and will never be sold.</p>
                         </div>
                         <div style="margin-top:8px;">
                             <button class="form-back" onclick="prevStep(3)">← Back</button>
@@ -980,5 +981,405 @@
             </div>
         </div>
     </div>
+    <!-- ═══ PRIVACY POLICY MODAL ═══════════════════════════ -->
+    <div class="pp-overlay" id="privacyModal">
+        <div class="pp-wrapper">
+            <button class="pp-close" onclick="closePrivacyModal()" aria-label="Close">&times;</button>
+            <div class="pp-modal">
+            
+            <!-- Modal Header -->
+            <div class="pp-header">
+                <div class="pp-header-badge">01</div>
+                <h2 class="pp-header-title">Privacy Policy</h2>
+                <p class="pp-header-url">sparfinservices.com</p>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="pp-body">
+                <!-- Effective Date Bar -->
+                <div class="pp-date-bar">
+                    <div class="pp-date-item"><strong>Effective Date:</strong> 1 May 2025</div>
+                    <div class="pp-date-item"><strong>Last Updated:</strong> 1 May 2025</div>
+                </div>
+
+                <!-- Who We Are -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Who We Are</h3>
+                    <p>SPARFIN Services LLP ("we", "us", "our") is an independent loan advisory firm registered in Tamil Nadu, India. We operate the website sparfinservices.com and facilitate loan enquiries with partner banks and NBFCs. We are not a bank, lender, or NBFC. We act solely as a loan advisory intermediary.</p>
+                    <table class="pp-info-table">
+                        <tr><td class="pp-label-cell">Registered Name</td><td>SPARFIN Services LLP</td></tr>
+                        <tr><td class="pp-label-cell">Address</td><td>No. 42, 2nd Floor, Anna Nagar East, Chennai – 600 102, Tamil Nadu</td></tr>
+                        <tr><td class="pp-label-cell">Email</td><td>info@sparfinservices.com</td></tr>
+                        <tr><td class="pp-label-cell">Phone</td><td>+91 98765 43210</td></tr>
+                    </table>
+                </div>
+
+                <!-- What Information We Collect -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">What Information We Collect</h3>
+                    <p>When you submit an enquiry, we collect only the information needed to provide advisory services:</p>
+                    <table class="pp-data-table">
+                        <thead>
+                            <tr><th>Data Collected</th><th>Why We Collect It</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Full Name</strong></td><td>To address you and identify your enquiry</td></tr>
+                            <tr><td><strong>Mobile Number</strong></td><td>To contact you for a consultation callback</td></tr>
+                            <tr><td><strong>City / Location</strong></td><td>To assign a local advisor to your enquiry</td></tr>
+                            <tr><td><strong>Employment Type</strong></td><td>To identify suitable lender categories for your profile</td></tr>
+                            <tr><td><strong>Loan Type & Amount</strong></td><td>To match you with relevant loan products</td></tr>
+                            <tr><td><strong>Property Type</strong></td><td>To shortlist applicable lender criteria</td></tr>
+                            <tr><td><strong>Stage & Contact Preference</strong></td><td>To personalise the advisory response</td></tr>
+                            <tr><td><strong>Optional Message</strong></td><td>To understand any specific query you may have</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="pp-callout pp-callout-gold">
+                        <em>We do not collect Aadhaar numbers, PAN, bank account details, passwords or any biometric data through this website.</em>
+                    </div>
+                </div>
+
+                <!-- How We Use Your Information -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">How We Use Your Information</h3>
+                    <p>Your information is used strictly to:</p>
+                    <ul class="pp-list">
+                        <li>Contact you with a personalised advisory response within 24 business hours</li>
+                        <li>Compare and match your requirement with suitable loan products across our lender network</li>
+                        <li>Assign an advisor to guide you through eligibility, documentation and processing</li>
+                        <li>Communicate via call, WhatsApp or email based on your stated contact preference</li>
+                        <li>Improve our website and services on an anonymised, aggregated basis</li>
+                    </ul>
+                    <div class="pp-callout pp-callout-gold">
+                        <em>We will never use your information to send unsolicited promotional messages for unrelated products. You may opt out at any time by writing to info@sparfinservices.com.</em>
+                    </div>
+                </div>
+
+                <!-- How We Share Your Information -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">How We Share Your Information</h3>
+                    <p>We do not sell, rent or trade your personal data. Information is shared only in these limited circumstances:</p>
+                    <ul class="pp-list">
+                        <li>With partner banks and NBFCs — solely to assess your eligibility and process your enquiry, and only with your knowledge during the advisory process.</li>
+                        <li>With our internal team and authorised service providers involved in delivering the advisory service, all bound by confidentiality obligations.</li>
+                        <li>When required by law — if compelled by a court order or regulatory authority under the IT Act 2000 or DPDP Act 2023.</li>
+                    </ul>
+                </div>
+
+                <!-- Data Retention -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Data Retention</h3>
+                    <p>We retain your data for 24 months from the date of submission, or until the advisory service is complete. After this period, data is securely deleted unless a legal obligation requires longer retention.</p>
+                </div>
+
+                <!-- Your Rights Under the DPDP Act, 2023 -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Your Rights Under the DPDP Act, 2023</h3>
+                    <p>You have the following rights as a data principal:</p>
+                    <table class="pp-rights-table">
+                        <tr><td class="pp-right-label">Right to Access</td><td>Request a summary of the personal data we hold about you</td></tr>
+                        <tr><td class="pp-right-label">Right to Correct</td><td>Request correction of inaccurate or incomplete data</td></tr>
+                        <tr><td class="pp-right-label">Right to Erase</td><td>Request deletion of your data, subject to legal obligations</td></tr>
+                        <tr><td class="pp-right-label">Right to Withdraw Consent</td><td>Withdraw consent for processing your data at any time</td></tr>
+                        <tr><td class="pp-right-label">Right to Grievance Redressal</td><td>Raise a complaint about how we handle your data</td></tr>
+                    </table>
+                    <p style="margin-top: 16px;">To exercise any of these rights, write to info@sparfinservices.com. We will respond within 30 days.</p>
+                </div>
+
+                <!-- Cookies & Tracking -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Cookies & Tracking</h3>
+                    <p>Our website may use standard analytics cookies (e.g. Google Analytics) to understand visitor behaviour on an anonymised basis. We do not use cookies to identify you personally. You may disable cookies via your browser settings at any time.</p>
+                </div>
+
+                <!-- Data Security -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Data Security</h3>
+                    <p>We implement reasonable technical and organisational measures to protect your personal data against unauthorised access, misuse or loss. However, no data transmission over the internet can be guaranteed to be completely secure.</p>
+                </div>
+
+                <!-- Changes to This Policy -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Changes to This Policy</h3>
+                    <p>We may update this Privacy Policy from time to time. The revised version will be posted on this page with an updated "Last Updated" date. We encourage you to review this page periodically.</p>
+                </div>
+
+                <!-- Contact -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Contact</h3>
+                    <table class="pp-contact-table">
+                        <tr><td class="pp-contact-label">Email</td><td>info@sparfinservices.com</td></tr>
+                        <tr><td class="pp-contact-label">Phone</td><td>+91 98765 43210</td></tr>
+                        <tr><td class="pp-contact-label">Address</td><td>SPARFIN Services LLP, No. 42, 2nd Floor, Anna Nagar East, Chennai – 600 102</td></tr>
+                        <tr><td class="pp-contact-label">Hours</td><td>Monday to Saturday, 9:00 AM – 7:00 PM</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ TERMS OF SERVICE MODAL ═════════════════════════ -->
+    <div class="pp-overlay" id="termsModal">
+        <div class="pp-wrapper">
+            <button class="pp-close" onclick="closeTermsModal()" aria-label="Close">&times;</button>
+            <div class="pp-modal">
+
+            <!-- Modal Header -->
+            <div class="pp-header">
+                <div class="pp-header-badge">02</div>
+                <h2 class="pp-header-title">Terms of Service</h2>
+                <p class="pp-header-url">sparfinservices.com</p>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="pp-body">
+                <!-- Effective Date Bar -->
+                <div class="pp-date-bar">
+                    <div class="pp-date-item"><strong>Effective Date:</strong> 1 May 2025</div>
+                    <div class="pp-date-item"><strong>Last Updated:</strong> 1 May 2025</div>
+                </div>
+
+                <!-- Acceptance of Terms -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Acceptance of Terms</h3>
+                    <p>By accessing or using sparfinservices.com ("Website"), you agree to be bound by these Terms of Service. If you do not agree, please do not use this Website. These Terms apply to all visitors, enquiry submitters and users.</p>
+                </div>
+
+                <!-- About SPARFIN Services LLP -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">About SPARFIN Services LLP</h3>
+                    <p>SPARFIN Services LLP is an independent loan advisory and financial consultancy firm registered under the Limited Liability Partnership Act, 2008, with its registered office in Chennai, Tamil Nadu. SPARFIN is not a bank, financial institution, or NBFC registered with the Reserve Bank of India. SPARFIN does not disburse, sanction, guarantee or underwrite any loans.</p>
+                    <div class="pp-callout pp-callout-gold">
+                        <em>SPARFIN acts solely as an intermediary providing information, comparison, guidance and documentation assistance in connection with loan products offered by third-party banks and NBFCs.</em>
+                    </div>
+                </div>
+
+                <!-- Services Provided -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Services Provided</h3>
+                    <p>Through this Website, SPARFIN provides the following advisory services:</p>
+                    <ul class="pp-list">
+                        <li>Loan product information and comparison across multiple banks and NBFCs</li>
+                        <li>Free eligibility assessment and advisory consultation</li>
+                        <li>Documentation guidance and filing assistance</li>
+                        <li>Liaison with lenders on behalf of the client</li>
+                        <li>Property consultation and market advisory</li>
+                    </ul>
+                    <p>All services are advisory in nature. SPARFIN does not guarantee loan approval, specific interest rates, loan amounts or timelines. Final lending decisions rest solely with the respective bank or NBFC.</p>
+                </div>
+
+                <!-- User Obligations -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">User Obligations</h3>
+                    <p>By using this Website and submitting an enquiry, you agree to:</p>
+                    <ul class="pp-list">
+                        <li>Provide accurate, complete and truthful information in the enquiry form</li>
+                        <li>Not misrepresent your identity, financial details or intentions</li>
+                        <li>Use the Website only for lawful purposes in accordance with these Terms</li>
+                        <li>Not attempt to gain unauthorised access to any part of the Website or its systems</li>
+                        <li>Not use the Website to transmit any harmful, unlawful or offensive content</li>
+                    </ul>
+                </div>
+
+                <!-- No Advance Fees -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">No Advance Fees</h3>
+                    <p>SPARFIN's initial consultation and loan advisory services are free of charge to users. SPARFIN earns a referral or processing fee from lenders upon successful loan disbursement. This fee is paid by the lender, not by you.</p>
+                    <p>Any fees applicable to specific services (such as legal verification or property consulting) will be clearly disclosed before you commit.</p>
+                </div>
+
+                <!-- Intellectual Property -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Intellectual Property</h3>
+                    <p>All content on this Website — including text, graphics, logos, icons and design — is the intellectual property of SPARFIN Services LLP or its licensed providers. You may not reproduce or use any content for commercial purposes without prior written consent from SPARFIN.</p>
+                </div>
+
+                <!-- Third-Party Links & Services -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Third-Party Links & Services</h3>
+                    <p>This Website may contain links to third-party websites such as bank portals. SPARFIN is not responsible for the content, privacy practices or availability of any third-party website. Accessing such links is at your own risk.</p>
+                </div>
+
+                <!-- Limitation of Liability -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Limitation of Liability</h3>
+                    <p>To the maximum extent permitted by applicable law, SPARFIN shall not be liable for:</p>
+                    <ul class="pp-list">
+                        <li>Any loan rejection or non-approval by a lender, irrespective of advisory provided</li>
+                        <li>Loss or damage arising from reliance on information provided on this Website</li>
+                        <li>Delays, interruptions or errors in the Website's operation</li>
+                        <li>Actions or decisions taken by third-party banks and NBFCs</li>
+                        <li>Any consequential, indirect, incidental or special damages arising from use of this Website</li>
+                    </ul>
+                </div>
+
+                <!-- Privacy -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Privacy</h3>
+                    <p>Your use of this Website is governed by our Privacy Policy, incorporated into these Terms by reference. By accepting these Terms, you also accept our Privacy Policy.</p>
+                </div>
+
+                <!-- Governing Law & Jurisdiction -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Governing Law & Jurisdiction</h3>
+                    <p>These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts located in Chennai, Tamil Nadu, India.</p>
+                </div>
+
+                <!-- Amendments -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Amendments</h3>
+                    <p>SPARFIN may modify these Terms at any time. Updated Terms will be published with a revised date. Continued use of the Website after changes constitutes acceptance of the revised Terms.</p>
+                </div>
+
+                <!-- Contact -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Contact</h3>
+                    <table class="pp-contact-table">
+                        <tr><td class="pp-contact-label">Email</td><td>info@sparfinservices.com</td></tr>
+                        <tr><td class="pp-contact-label">Phone</td><td>+91 98765 43210</td></tr>
+                        <tr><td class="pp-contact-label">Address</td><td>SPARFIN Services LLP, No. 42, 2nd Floor, Anna Nagar East, Chennai – 600 102</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ═══ DISCLAIMER MODAL ════════════════════════════════ -->
+    <div class="pp-overlay" id="disclaimerModal">
+        <div class="pp-wrapper">
+            <button class="pp-close" onclick="closeDisclaimerModal()" aria-label="Close">&times;</button>
+            <div class="pp-modal">
+
+            <!-- Modal Header -->
+            <div class="pp-header">
+                <div class="pp-header-badge">03</div>
+                <h2 class="pp-header-title">Disclaimer</h2>
+                <p class="pp-header-url">sparfinservices.com</p>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="pp-body">
+                <!-- Effective Date Bar -->
+                <div class="pp-date-bar">
+                    <div class="pp-date-item"><strong>Effective Date:</strong> 1 May 2025</div>
+                    <div class="pp-date-item"><strong>Last Updated:</strong> 1 May 2025</div>
+                </div>
+
+                <!-- Nature of SPARFIN's Services -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Nature of SPARFIN's Services</h3>
+                    <p>SPARFIN Services LLP is an independent loan advisory and financial consultancy firm. SPARFIN is not a bank, financial institution, or NBFC registered with the Reserve Bank of India. SPARFIN does not lend money, sanction loans, guarantee approvals, set interest rates or process loan disbursements.</p>
+                    <p>All loan products referenced on this website are offered by third-party banks and NBFCs. SPARFIN acts as a facilitator and advisor, helping you understand your options and connect with the appropriate lender.</p>
+                    <div class="pp-callout pp-callout-gold">
+                        <em>Loan approval, terms, interest rates, processing fees and disbursement timelines are entirely at the discretion of the respective bank or NBFC and are governed by their internal policies and RBI guidelines.</em>
+                    </div>
+                </div>
+
+                <!-- Interest Rates & Financial Information -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Interest Rates & Financial Information</h3>
+                    <p>All interest rates, EMI figures, loan amounts and fees mentioned on this Website are:</p>
+                    <ul class="pp-list">
+                        <li>Indicative only, based on prevailing market averages at the time of publication</li>
+                        <li>Subject to change at any time without prior notice by the respective lenders</li>
+                        <li>Variable depending on the applicant's credit profile, income, property and lender policies</li>
+                        <li>Not a guarantee or commitment of any specific rate, amount or approval</li>
+                    </ul>
+                    <p>The EMI calculator on this Website provides an estimate for informational purposes only. Actual EMIs will depend on the final loan terms agreed between you and the lender.</p>
+                </div>
+
+                <!-- No Advance Fees -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">No Advance Fees</h3>
+                    <p>SPARFIN does not charge any advance fee, registration fee or upfront processing fee from loan applicants for the initial advisory and loan facilitation service.</p>
+                    <div class="pp-callout pp-callout-red">
+                        <em>If anyone claiming to represent SPARFIN requests an advance payment before your loan is sanctioned or disbursed, please do not pay and contact us immediately. This may indicate fraudulent activity.</em>
+                    </div>
+                </div>
+
+                <!-- Third-Party Lenders -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Third-Party Lenders</h3>
+                    <p>SPARFIN's partner banks and NBFCs are independent third parties. SPARFIN is not responsible for:</p>
+                    <ul class="pp-list">
+                        <li>The terms, conditions or policies of any bank or NBFC</li>
+                        <li>Changes to interest rates, processing norms or eligibility criteria by lenders</li>
+                        <li>The conduct or decisions of lender representatives</li>
+                        <li>Delays, rejections or additional requirements imposed by lenders during the loan process</li>
+                    </ul>
+                </div>
+
+                <!-- General Information Only -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">General Information Only</h3>
+                    <p>Content on this Website is for general informational purposes and does not constitute personalised financial, legal, tax or investment advice. We strongly recommend independently verifying all loan terms and conditions directly with the lender before signing any agreement.</p>
+                </div>
+
+                <!-- Website Accuracy -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Website Accuracy</h3>
+                    <p>While SPARFIN makes every effort to ensure information is accurate and up to date, we do not warrant that the content is free from errors, that the Website will be uninterrupted, or that any information remains current at the time of your access. SPARFIN reserves the right to correct or update content at any time without notice.</p>
+                </div>
+
+                <!-- Quick Reference Table -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Quick Reference — What SPARFIN Is and Is Not</h3>
+                    <table class="pp-compare-table">
+                        <thead>
+                            <tr>
+                                <th>Topic</th>
+                                <th class="pp-col-not">✗ What SPARFIN is NOT</th>
+                                <th class="pp-col-is">✓ What SPARFIN IS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Business Nature</strong></td>
+                                <td class="pp-text-not">A bank, lender, or NBFC</td>
+                                <td class="pp-text-is">An independent loan advisory firm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Loan Decisions</strong></td>
+                                <td class="pp-text-not">Approves or rejects loans</td>
+                                <td class="pp-text-is">Facilitates and guides the enquiry process</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Interest Rates</strong></td>
+                                <td class="pp-text-not">Sets or guarantees any rate</td>
+                                <td class="pp-text-is">Compares and presents indicative options</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fees from Applicant</strong></td>
+                                <td class="pp-text-not">Charges advance fees</td>
+                                <td class="pp-text-is">Free advisory; earns lender referral fee only</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Loan Disbursement</strong></td>
+                                <td class="pp-text-not">Disburses funds to applicant</td>
+                                <td class="pp-text-is">Connects you to the disbursing lender</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Regulatory Status</strong></td>
+                                <td class="pp-text-not">RBI registered lender</td>
+                                <td class="pp-text-is">Advisory intermediary / DSA facilitator</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Contact -->
+                <div class="pp-section">
+                    <h3 class="pp-section-title">Contact</h3>
+                    <table class="pp-contact-table">
+                        <tr><td class="pp-contact-label">Email</td><td>info@sparfinservices.com</td></tr>
+                        <tr><td class="pp-contact-label">Phone</td><td>+91 98765 43210</td></tr>
+                        <tr><td class="pp-contact-label">Address</td><td>SPARFIN Services LLP, No. 42, 2nd Floor, Anna Nagar East, Chennai – 600 102</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
 </body>
 </html>
