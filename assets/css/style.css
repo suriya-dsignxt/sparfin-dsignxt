@@ -1038,7 +1038,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 }
 
 @media (max-width: 480px) {
-  .container { padding: 0 10px; }
+  .container { padding: 0 20px; }
   .logo-badge { width: 110px; height: 80px; }
   .hero-title { font-size: 1.8rem; }
   .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; justify-content: center; }
