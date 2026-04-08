@@ -817,9 +817,10 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
     align-items: flex-end;
 }
+
 
 .qa-btn {
     width: 52px;
