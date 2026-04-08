@@ -131,7 +131,7 @@ nav.scrolled .nav-inner {
 .nav-links a:hover { color: var(--navy2); }
 .nav-cta { display: flex; gap: 12px; align-items: center; }
 .nav.c-value { color: var(--navy); font-weight: 600; font-size: 1rem; line-height: 1.5; text-decoration: none; display: block; transition: color 0.2s; }
-a.c-value:hover { color: var(--gold); text-decoration: underline; }
+a.c-value:hover { color: var(--gold);}
 .nav-phone { color: var(--navy); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; text-decoration: none; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .nav-phone:hover { color: var(--navy2); transform: translateY(-1px); }
 .nav-btn { 
