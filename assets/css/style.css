@@ -988,6 +988,9 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 }
 
 @media (max-width: 768px) {
+  #hero { padding: 40px 0 50px; }
+  .hero-tag { margin-bottom: 16px; }
+  .hero-actions { margin-bottom: 32px; }
   .grid-2, .calc-body, .contact-grid, .faq-grid { grid-template-columns: 1fr; }
   .container { padding: 0 22px; }
   .nav-links, .nav-cta { display: none; }
@@ -1521,13 +1524,16 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
     overflow-x: auto;
   }
   .pp-close, .modal-close {
-    top: -45px;
-    right: 0;
-    width: 36px; height: 36px;
+    top: 14px;
+    right: 14px;
+    width: 32px; height: 32px;
     font-size: 1.2rem;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   }
   .pp-wrapper, .modal-wrapper {
-    margin-top: 50px;
+    position: relative;
+    margin-top: -80px;
   }
 }
 
