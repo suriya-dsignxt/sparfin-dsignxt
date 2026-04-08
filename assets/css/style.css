@@ -1031,6 +1031,26 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .cta-link { font-size: 0.95rem; text-decoration: underline; white-space: nowrap; }
   .quick-enquiry-card { padding: 32px 24px; }
   .quick-enquiry-card h3 { font-size: 1.5rem; }
+  
+  /* Mobile Testimonials Carousel */
+  #testimonials .grid-3 {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 24px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-left: -22px;
+    margin-right: -22px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  #testimonials .grid-3::-webkit-scrollbar { display: none; }
+  #testimonials .testi-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
   .hero-cta-card { flex-direction: column; gap: 12px; text-align: center; border-radius: 12px; padding: 22px 16px; margin-top: 10px; }
   .whatsapp-box { flex-direction: column; text-align: center; gap: 12px; }
   .whatsapp-box a { width: 100%; justify-content: center; }
