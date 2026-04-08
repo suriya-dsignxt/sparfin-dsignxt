@@ -931,12 +931,13 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 .modal-content::-webkit-scrollbar { width: 8px; }
 .modal-content::-webkit-scrollbar-track { background: transparent; }
 .modal-content::-webkit-scrollbar-thumb { 
-  background: rgba(var(--navy-rgb), 0.15); 
+  background: rgba(35, 184, 116, 0.2); 
   border-radius: 20px; 
   border: 2px solid #fff; 
   background-clip: padding-box; 
 }
-.modal-content::-webkit-scrollbar-thumb:hover { background: rgba(var(--navy-rgb), 0.3); }
+.modal-content::-webkit-scrollbar-thumb:hover { background: rgba(35, 184, 116, 0.4); }
+
 
 .modal-close { 
   position: absolute; top: 24px; right: 24px; 
@@ -1015,7 +1016,8 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 
 .pp-modal {
   background: #fff;
-  border-radius: 24px;
+  border-radius: 0;
+
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
@@ -1032,13 +1034,14 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 .pp-modal::-webkit-scrollbar { width: 8px; }
 .pp-modal::-webkit-scrollbar-track { background: transparent; }
 .pp-modal::-webkit-scrollbar-thumb { 
-  background: rgba(var(--navy-rgb), 0.15); 
+  background: rgba(35, 184, 116, 0.25); 
   border-radius: 20px; 
   border: 2px solid #fff; 
   background-clip: padding-box; 
   transition: background 0.3s;
 }
-.pp-modal::-webkit-scrollbar-thumb:hover { background: rgba(var(--navy-rgb), 0.35); }
+.pp-modal::-webkit-scrollbar-thumb:hover { background: rgba(35, 184, 116, 0.45); }
+
 
 
 .pp-close {
@@ -1073,7 +1076,8 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-radius: 24px 24px 0 0;
+  border-radius: 0;
+
 }
 .pp-header::before {
   content: '';
