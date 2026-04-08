@@ -927,14 +927,15 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 .modal-content { 
   background: #fff; border-radius: 0; max-width: 600px; width: 100%; position: relative; max-height: 90vh; overflow-y: auto; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.7); border: none; 
 }
-/* Solid green scrollbar for lead modal */
-.modal-content::-webkit-scrollbar { width: 10px; }
+/* Thinner rounded green scrollbar for lead modal */
+.modal-content::-webkit-scrollbar { width: 6px; }
 .modal-content::-webkit-scrollbar-track { background: var(--gray1); }
 .modal-content::-webkit-scrollbar-thumb { 
   background: var(--green); 
-  border-radius: 0; 
+  border-radius: 10px; 
 }
 .modal-content::-webkit-scrollbar-thumb:hover { background: #1e9d60; }
+
 
 
 .modal-close { 
@@ -1027,14 +1028,15 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Solid green scrollbar for legal modals */
-.pp-modal::-webkit-scrollbar { width: 10px; }
+/* Thinner rounded green scrollbar for legal modals */
+.pp-modal::-webkit-scrollbar { width: 6px; }
 .pp-modal::-webkit-scrollbar-track { background: var(--gray1); }
 .pp-modal::-webkit-scrollbar-thumb { 
   background: var(--green); 
-  border-radius: 0;
+  border-radius: 10px;
 }
 .pp-modal::-webkit-scrollbar-thumb:hover { background: #1e9d60; }
+
 
 
 
