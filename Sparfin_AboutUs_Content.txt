@@ -1,0 +1,63 @@
+SPARFIN Services LLP
+Website - About Section Content
+Prepared by Dsignxt · April 2026
+
+DEVELOPER REFERENCE
+Each labelled element below maps directly to a component on the website. Replace copy in order.
+
+
+01  Section Tag (Pill Label)
+Element
+Small pill / tag above the main headline
+Copy
+ABOUT SPARFIN
+Style note
+Teal background, white all-caps text - matches existing website pill style
+
+02  Main Headline (H2)
+Element
+Large bold headline - 2 lines on desktop
+COPY
+Not Just a Loan. A Better Deal - Every Time.
+Alt headline (A/B test)
+Chennai's Independent Loan Experts - Working Only For You.
+
+03  Subtitle / Subheading
+Element
+1–2 line descriptor below the headline, lighter weight
+COPY
+We don't work for banks. We work for you. SPARFIN compares 25+ banks and NBFCs to secure the right loan for your profile - with full transparency, zero hidden charges, and expert support from enquiry to disbursement.
+
+04  Feature Cards (3 × 2 Grid)
+Element
+Six cards in 3-column, 2-row grid - each with number, bold title, body copy
+Style note
+Gold top border accent per card. Light background (#F9FBFF). Match existing card layout.
+
+01
+We Work For You, Not The Bank
+Most loan agents are tied to one or two lenders and push whatever earns them the highest commission. SPARFIN is 100% independent. Our only loyalty is to you - finding the deal that fits your profile, not the one that pads our pocket.
+
+02
+Insider Expertise, Real Results
+Our advisors bring decades of combined experience across India's leading private and public sector banks. We know exactly how lenders evaluate files - and we use that knowledge to give your application the best possible chance of approval.
+
+03
+25+ Banks & NBFCs Under One Roof
+As official channel partners with 25+ leading banks and NBFCs, we open doors you simply can't walk into alone. More lenders means more competition for your business - and better rates landing in your hands.
+
+04
+Transparent. Always.
+No hidden charges, no last-minute fee surprises. Before you sign anything, we walk you through every cost, condition, and clause in plain language. What you see is exactly what you get - always.
+
+05
+Approved in 7–10 Working Days
+Our pre-verified document workflows and established lender relationships mean your file moves fast. Most clients receive approval in 7–10 working days - well ahead of the standard bank timeline.
+
+06
+A Partner For Life, Not Just a Transaction
+Our relationship doesn't end when your loan is disbursed. Balance transfers, top-up loans, EMI restructuring, and property guidance - SPARFIN stays by your side throughout your entire financial journey.
+
+
+
+SPARFIN Services LLP is an independent loan advisory firm and does not directly lend money. All loan terms subject to lender eligibility.
