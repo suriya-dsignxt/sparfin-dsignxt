@@ -1020,6 +1020,18 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   #services, #why, .about-section, #process, #testimonials, #calculator, #contact, #faq {
     padding: 60px 0 !important;
   }
+
+  /* Privacy Policy Modal Scaling */
+  .pp-wrapper { max-width: 640px; }
+  .pp-header { padding: 32px 32px 28px; }
+  .pp-header-title { font-size: 1.6rem; }
+  .pp-header-badge { width: 38px; height: 38px; margin-bottom: 12px; }
+  .pp-body { padding: 24px 32px 32px; }
+  .pp-section { margin-bottom: 24px; padding-bottom: 24px; }
+  .pp-section-title { font-size: 1.1rem; }
+  .pp-date-bar { margin-bottom: 24px; gap: 12px; }
+  .pp-date-item { padding: 10px 15px; font-size: 0.78rem; }
+  .pp-close { right: -10px; top: -10px; }
 }
 
 @media (max-width: 1024px) {
