@@ -990,12 +990,10 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
 /* ─── RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 1200px) {
   .container { padding: 0 40px; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 0.85rem; }
-  .nav-inner { gap: 15px; }
-  .nav-btn { padding: 8px 18px; font-size: 0.82rem; }
-  .nav-phone { font-size: 0.85rem; }
-  .logo-badge { width: 125px; height: 85px; }
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .nav-inner { height: 72px; padding: 0; }
+  .logo-badge { width: 115px; height: 80px; }
 
   #hero { padding: 60px 0 70px; }
   .hero-title { font-size: clamp(2.1rem, 4.2vw, 2.6rem); line-height: 1.15; }
@@ -1032,13 +1030,31 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .pp-date-bar { margin-bottom: 24px; gap: 12px; }
   .pp-date-item { padding: 10px 15px; font-size: 0.78rem; }
   .pp-close { right: -10px; top: -10px; }
+
+  /* EMI Calculator Side-by-Side on Tablet */
+  .calc-body { grid-template-columns: 1.1fr 1fr; gap: 40px; }
+  .calc-card { padding: 40px 30px; }
+  .emi-amount { font-size: 2.8rem; }
+
+  /* Testimonials 2-column for Tablet */
+  #testimonials .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  /* Contact & Footer Scaling */
+  .contact-grid { grid-template-columns: 1fr 1.1fr; gap: 32px; }
+  .contact-info .section-title { font-size: 2rem; }
+  .contact-details { margin-top: 24px; gap: 12px; }
+  .c-icon { width: 40px; height: 40px; }
+  .c-icon img { width: 22px; height: 22px; }
+  .lead-form-card { padding: 28px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; padding: 40px 0; }
+  .footer-logo { top: -20px; left: -10px; }
+  .footer-desc { font-size: 0.8rem; }
 }
 
 @media (max-width: 1024px) {
   .container { padding: 0 32px; }
   .faq-grid { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1.15fr 1fr; gap: 24px; }
-  .calc-body { grid-template-columns: 1fr; gap: 40px; }
   .calc-result-side { max-width: 500px; margin: 0 auto; width: 100%; }
   .contact-grid { grid-template-columns: 1fr 1.1fr; gap: 40px; }
 
