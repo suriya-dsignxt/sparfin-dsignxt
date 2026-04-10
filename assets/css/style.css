@@ -91,17 +91,33 @@ nav.scrolled .nav-inner {
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; transition: height 0.4s; }
 /* ─── LOGO SHIMMER ─────────────────────────────────────── */
-.logo-badge { position: relative; display: flex; align-items: center; justify-content: center; width: 140px; height: 100px; margin-top: -3px; }
-.logo-lottie { border: none; width: 220px; height: 160px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(1.1); pointer-events: none; background: transparent; }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
-.logo { display: inline-flex; align-items: center; width: fit-content; padding-left: 5px;}
+.logo-badge { 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 160px; 
+  height: 52px; 
+  overflow: visible; 
+}
+.logo-lottie { 
+  border: none; 
+  width: 320px; 
+  height: 240px; 
+  position: absolute; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%) scale(0.6); 
+  pointer-events: none; 
+  background: transparent; 
+}
+.logo { display: inline-flex; align-items: center; width: fit-content; }
 .footer-logo .logo-badge {
-  width: 180px;
-  height: 100px;
-  margin-top: -10px;
+  width: 200px;
+  height: 80px;
 }
 .footer-logo .logo-lottie {
-  transform: scale(1.62);
+  transform: translate(-50%, -50%) scale(0.9);
 }
 .nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a { 
@@ -789,7 +805,7 @@ input[type=range]::-moz-range-track {
 /* ─── FOOTER ────────────────────────────────────────────── */
 footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: rgba(255,255,255,0.55); }
 .footer-top { padding: 60px 0 40px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
-.footer-logo { display: block; position: relative; top: -85px; left: -100px; margin-bottom: 0; width: fit-content; }
+.footer-logo { display: block; margin-bottom: 12px; width: fit-content; overflow: visible; }
 .footer-logo .logo-badge { background: none; }
 .footer-desc { font-size: 0.85rem; line-height: 1.7; margin-bottom: 24px; position: relative; z-index: 2; }
 .footer-social { display: flex; gap: 10px; }
@@ -1040,14 +1056,15 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   #testimonials .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
   /* Contact & Footer Scaling */
-  .contact-grid { grid-template-columns: 1fr 1.1fr; gap: 32px; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .contact-action-side { padding-top: 0; }
   .contact-info .section-title { font-size: 2rem; }
   .contact-details { margin-top: 24px; gap: 12px; }
   .c-icon { width: 40px; height: 40px; }
   .c-icon img { width: 22px; height: 22px; }
   .lead-form-card { padding: 28px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; padding: 40px 0; }
-  .footer-logo { top: -20px; left: -10px; }
+  .footer-logo { margin-bottom: 20px; }
   .footer-desc { font-size: 0.8rem; }
 }
 
@@ -1056,7 +1073,9 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .faq-grid { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1.15fr 1fr; gap: 24px; }
   .calc-result-side { max-width: 500px; margin: 0 auto; width: 100%; }
-  .contact-grid { grid-template-columns: 1fr 1.1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .contact-action-side { padding-top: 0; }
+  .quick-enquiry-card { padding: 32px 24px; }
 
   .why-grid, .process-steps { grid-template-columns: repeat(2, 1fr); }
   .process-steps::after { display: none; }
@@ -1106,7 +1125,7 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   
   .contact-grid { gap: 40px; }
   .hero-cta-bar { padding: 14px 16px; font-size: 0.82rem; white-space: nowrap; }
-  .cta-link { font-size: 0.95rem; text-decoration: underline; white-space: nowrap; }
+  .cta-link { font-size: 0.95rem; text-decoration: none; white-space: nowrap; }
   .quick-enquiry-card { padding: 32px 24px; }
   .quick-enquiry-card h3 { font-size: 1.5rem; }
   
@@ -1138,8 +1157,8 @@ footer { background: linear-gradient(180deg, #12074d 0%, #0d0637 100%); color: r
   .hero-cta-card { flex-direction: column; gap: 12px; text-align: center; border-radius: 12px; padding: 22px 16px; margin-top: 10px; }
   .whatsapp-box { flex-direction: column; text-align: center; gap: 12px; }
   .whatsapp-box a { width: 100%; justify-content: center; }
-  .footer-logo { left: 0; top: 0; margin: 0 auto 24px; display: block; }
-  .footer-logo .logo-lottie { transform: scale(1.1) translate(-45.5%, -45.5%); }
+  .footer-logo { margin: 0 auto 24px; display: block; }
+  .footer-logo .logo-lottie { transform: translate(-50%, -50%) scale(0.7); }
   .footer-desc { text-align: center; }
   .footer-social { justify-content: center; }
 }
